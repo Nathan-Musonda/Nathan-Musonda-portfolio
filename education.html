@@ -10,7 +10,6 @@
     <style>
         .education-page { 
             padding: 60px 0;
-            background-color: var(--midnight-blue);
         }
         
         .education-timeline { 
@@ -19,8 +18,10 @@
         }
         
         .education-item {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.7) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 16px;
             padding: 30px;
             margin-bottom: 25px;
@@ -33,6 +34,7 @@
             border-color: var(--accent-gold);
             transform: translateX(10px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background-color: rgba(21, 30, 44, 0.9) !important;
         }
         
         .education-icon {
@@ -63,13 +65,14 @@
         }
         
         .education-details {
-            background-color: var(--midnight-blue);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 8px;
             padding: 12px;
             margin-top: 15px;
             color: var(--muted-white);
             font-size: 0.9rem;
+            backdrop-filter: blur(5px);
         }
         
         .education-details strong {
