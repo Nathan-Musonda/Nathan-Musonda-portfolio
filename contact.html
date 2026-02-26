@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Musonda | Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-page { padding: 60px 0; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info-card,
+        .contact-form-card {
+            background-color: var(--dark-blue-light);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        
+        .contact-info-card h2,
+        .contact-form-card h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-detail-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            width: 30px;
+        }
+        
+        .contact-detail-item h4 { color: white; margin-bottom: 5px; }
+        .contact-detail-item p { color: var(--text-muted); }
+        
+        .form-group { margin-bottom: 20px; }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--dark-blue-lighter);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .form-group textarea { height: 150px; resize: vertical; }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1e4a1f;
+            transform: translateY(-3px);
+        }
+        
+        .form-message {
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background-color: rgba(44,95,45,0.2);
+            border: 1px solid rgba(44,95,45,0.3);
+            color: var(--secondary);
+            display: block;
+        }
+        
+        .form-message.error {
+            background-color: rgba(239,51,64,0.2);
+            border: 1px solid rgba(239,51,64,0.3);
+            color: #ef3340;
+            display: block;
+        }
+        
+        .btn-loading { display: none; }
+        .btn-loading i { margin-right: 8px; }
+        
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code logo-icon"></i>
+                Nathan Musonda <span class="logo-nickname">(Professor Nate)</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="linkedin.html">LinkedIn</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="CV.html">My CV</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-overlay" id="navOverlay"></div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss your project or collaboration</p>
+        </div>
+    </div>
+
+    <div class="contact-page">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-detail-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h4>Name</h4>
+                            <p>Nathan Musonda (Professor Nate)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Lusaka, Zambia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone/WhatsApp</h4>
+                            <p>+260 972 021 106</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>nathanmusonda85@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/Shock-father</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/nathan-musonda-382b82181</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <i class="fab fa-tiktok"></i>
+                        <div>
+                            <h4>TikTok</h4>
+                            <p>@nathannatemusonda</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-card">
+                    <h2>Send a Message</h2>
+                    
+                    <div class="form-message" id="formMessage"></div>
+                    
+                    <form action="https://formspree.io/f/xpqjaldw" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="" disabled selected>Select Service Needed</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="mobile-app">Mobile Application</option>
+                                <option value="python-development">Python Programming</option>
+                                <option value="database-design">Database Design</option>
+                                <option value="ai-ml">AI/ML Integration</option>
+                                <option value="consulting">IT Consulting</option>
+                                <option value="education">Tech Education</option>
+                                <option value="collaboration">Project Collaboration</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Nathan Musonda</div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nathan Musonda</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            const formMessage = document.getElementById('formMessage');
+            
+            formMessage.style.display = 'none';
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            
+            // Form will submit to Formspree
+        });
+        
+        // Check for success/error in URL
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const formMessage = document.getElementById('formMessage');
+            
+            if (urlParams.has('success')) {
+                formMessage.className = 'form-message success';
+                formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Message sent successfully.';
+                formMessage.style.display = 'block';
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+            
+            if (urlParams.has('error')) {
+                formMessage.className = 'form-message error';
+                formMessage.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error sending message. Please email directly.';
+                formMessage.style.display = 'block';
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+    </script>
+</body>
+</html>

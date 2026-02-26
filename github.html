@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Musonda | GitHub Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .github-page {
+            background-color: var(--github-black);
+            min-height: calc(100vh - 70px);
+            padding: 60px 0;
+        }
+        
+        .github-profile-header {
+            background-color: #161b22;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border: 1px solid #30363d;
+        }
+        
+        .github-avatar-large {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--accent);
+            object-fit: cover;
+        }
+        
+        .github-user-info h2 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .github-username {
+            color: #8b949e;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .github-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .github-stat-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .github-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        .github-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .github-project-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        
+        .github-project-card:hover {
+            transform: translateY(-5px);
+            border-color: #238636;
+        }
+        
+        .github-project-title {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .github-project-badge {
+            display: inline-block;
+            background-color: rgba(35,134,54,0.2);
+            color: #238636;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .github-project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .github-tech-tag {
+            background-color: rgba(56,139,253,0.1);
+            color: #58a6ff;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .github-profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .github-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .github-projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code logo-icon"></i>
+                Nathan Musonda <span class="logo-nickname">(Professor Nate)</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="github.html" class="active">GitHub</a></li>
+                    <li><a href="linkedin.html">LinkedIn</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="CV.html">My CV</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-overlay" id="navOverlay"></div>
+        </div>
+    </header>
+
+    <div class="github-page">
+        <div class="container">
+            <div class="github-profile-header">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=774&q=80" alt="Nathan Musonda" class="github-avatar-large">
+                <div class="github-user-info">
+                    <h2>Nathan Musonda (Shock-father)</h2>
+                    <div class="github-username">@Shock-father · Computer Science Student</div>
+                    <a href="https://github.com/Shock-father" target="_blank" class="btn btn-github">
+                        <i class="fab fa-github"></i> View GitHub Profile
+                    </a>
+                </div>
+            </div>
+            
+            <div class="github-stats-grid">
+                <div class="github-stat-card">
+                    <div class="github-stat-number">Python</div>
+                    <div>Primary Language</div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="github-stat-number">10+</div>
+                    <div>Projects</div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="github-stat-number">Active</div>
+                    <div>Development</div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="github-stat-number">2021</div>
+                    <div>Joined GitHub</div>
+                </div>
+            </div>
+            
+            <h2 style="color: white; margin-bottom: 30px;">Featured Projects</h2>
+            
+            <div class="github-projects-grid">
+                <div class="github-project-card">
+                    <h3 class="github-project-title">Academic Management Systems</h3>
+                    <span class="github-project-badge">Education</span>
+                    <p>Complete academic systems with Flask and MySQL.</p>
+                    <div class="github-project-tech">
+                        <span class="github-tech-tag">Python</span>
+                        <span class="github-tech-tag">Flask</span>
+                        <span class="github-tech-tag">MySQL</span>
+                    </div>
+                </div>
+                
+                <div class="github-project-card">
+                    <h3 class="github-project-title">Logistics Platforms</h3>
+                    <span class="github-project-badge">Business</span>
+                    <p>Inventory tracking and automation tools.</p>
+                    <div class="github-project-tech">
+                        <span class="github-tech-tag">Django</span>
+                        <span class="github-tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="github-project-card">
+                    <h3 class="github-project-title">Mobile Apps</h3>
+                    <span class="github-project-badge">Cross-Platform</span>
+                    <p>Flutter applications with Firebase.</p>
+                    <div class="github-project-tech">
+                        <span class="github-tech-tag">Flutter</span>
+                        <span class="github-tech-tag">Dart</span>
+                    </div>
+                </div>
+                
+                <div class="github-project-card">
+                    <h3 class="github-project-title">AI/ML Solutions</h3>
+                    <span class="github-project-badge">AI/ML</span>
+                    <p>TensorFlow Lite and scikit-learn implementations.</p>
+                    <div class="github-project-tech">
+                        <span class="github-tech-tag">TensorFlow</span>
+                        <span class="github-tech-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Nathan Musonda</div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nathan Musonda</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

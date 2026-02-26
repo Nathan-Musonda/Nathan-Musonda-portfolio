@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Musonda | Expertise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+        
+        .expertise-card {
+            background-color: var(--dark-blue-light);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            border-top: 5px solid var(--primary);
+        }
+        
+        .expertise-card:nth-child(2) { border-top-color: var(--secondary); }
+        .expertise-card:nth-child(3) { border-top-color: var(--accent); }
+        .expertise-card:nth-child(4) { border-top-color: #0066B3; }
+        .expertise-card:nth-child(5) { border-top-color: #238636; }
+        .expertise-card:nth-child(6) { border-top-color: var(--linkedin-blue); }
+        
+        .expertise-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .expertise-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .expertise-card:nth-child(2) .expertise-icon { color: var(--secondary); }
+        .expertise-card:nth-child(3) .expertise-icon { color: var(--accent); }
+        .expertise-card:nth-child(4) .expertise-icon { color: #0066B3; }
+        .expertise-card:nth-child(5) .expertise-icon { color: #238636; }
+        .expertise-card:nth-child(6) .expertise-icon { color: var(--linkedin-blue); }
+        
+        .expertise-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+        
+        .expertise-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code logo-icon"></i>
+                Nathan Musonda <span class="logo-nickname">(Professor Nate)</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="expertise.html" class="active">Expertise</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="linkedin.html">LinkedIn</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="CV.html">My CV</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-overlay" id="navOverlay"></div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Technical Expertise</h1>
+            <p>Specialized skills and technologies I work with</p>
+        </div>
+    </div>
+
+    <section class="expertise-grid container">
+        <div class="expertise-card">
+            <div class="expertise-icon"><i class="fas fa-code"></i></div>
+            <h3>Full-Stack Web Development</h3>
+            <p>Building complete web applications with Flask/Django backends and modern frontends. Specializing in academic systems, logistics platforms, and data-driven web solutions.</p>
+        </div>
+        <div class="expertise-card">
+            <div class="expertise-icon"><i class="fab fa-python"></i></div>
+            <h3>Python Programming</h3>
+            <p>Expert Python development for automation, data analysis, backend APIs, and AI/ML integration. Creating efficient, scalable solutions for various business needs.</p>
+        </div>
+        <div class="expertise-card">
+            <div class="expertise-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Mobile Application Development</h3>
+            <p>Developing cross-platform mobile applications with Flutter and native Android solutions. Focus on user-friendly interfaces and seamless functionality.</p>
+        </div>
+        <div class="expertise-card">
+            <div class="expertise-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI/ML Integration</h3>
+            <p>Implementing practical machine learning solutions with TensorFlow Lite and scikit-learn. Specializing in applied AI for real-world business problems.</p>
+        </div>
+        <div class="expertise-card">
+            <div class="expertise-icon"><i class="fas fa-database"></i></div>
+            <h3>Database Design & Administration</h3>
+            <p>Designing, implementing, and optimizing MySQL and PostgreSQL databases. Ensuring data integrity, security, and efficient access for applications.</p>
+        </div>
+        <div class="expertise-card">
+            <div class="expertise-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <h3>Tech Education & Mentoring</h3>
+            <p>Sharing knowledge through Professor Nate International. Teaching programming concepts, project development, and career guidance for aspiring developers.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
+                    <p>Computer Science Student & Software Developer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nathan Musonda</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

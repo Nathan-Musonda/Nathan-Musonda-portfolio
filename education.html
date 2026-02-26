@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Musonda | Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .education-timeline { max-width: 900px; margin: 40px auto; }
+        
+        .education-item {
+            background-color: var(--dark-blue-light);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            display: flex;
+            gap: 25px;
+            transition: all 0.3s;
+            border-left: 6px solid var(--primary);
+        }
+        
+        .education-item:nth-child(2) { border-left-color: var(--secondary); }
+        .education-item:nth-child(3) { border-left-color: var(--accent); }
+        .education-item:nth-child(4) { border-left-color: #0066B3; }
+        .education-item:nth-child(5) { border-left-color: #238636; }
+        .education-item:nth-child(6) { border-left-color: var(--linkedin-blue); }
+        
+        .education-item:hover { transform: translateX(10px); }
+        
+        .education-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            min-width: 60px;
+        }
+        
+        .education-item:nth-child(2) .education-icon { color: var(--secondary); }
+        .education-item:nth-child(3) .education-icon { color: var(--accent); }
+        .education-item:nth-child(4) .education-icon { color: #0066B3; }
+        .education-item:nth-child(5) .education-icon { color: #238636; }
+        .education-item:nth-child(6) .education-icon { color: var(--linkedin-blue); }
+        
+        .education-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .education-institution,
+        .education-date {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .education-item { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code logo-icon"></i>
+                Nathan Musonda <span class="logo-nickname">(Professor Nate)</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="linkedin.html">LinkedIn</a></li>
+                    <li><a href="education.html" class="active">Education</a></li>
+                    <li><a href="CV.html">My CV</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-overlay" id="navOverlay"></div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Education & Certifications</h1>
+            <p>My academic journey and professional development</p>
+        </div>
+    </div>
+
+    <div class="education-timeline container">
+        <div class="education-item">
+            <div class="education-icon"><i class="fas fa-school"></i></div>
+            <div class="education-content">
+                <h3>Primary Education</h3>
+                <div class="education-institution"><i class="fas fa-building"></i> North Park Private School</div>
+                <div class="education-date"><i class="far fa-calendar"></i> 2007 - 2014</div>
+                <p>Completed primary education with excellent academic performance. Top 10% in national examinations.</p>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="education-content">
+                <h3>Secondary Education</h3>
+                <div class="education-institution"><i class="fas fa-university"></i> Moomba Secondary School (Boarding)</div>
+                <div class="education-date"><i class="far fa-calendar"></i> 2015 - 2018</div>
+                <p>O-Levels with focus on sciences and mathematics. Subjects: Mathematics, Science, Computer Studies.</p>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-icon"><i class="fas fa-certificate"></i></div>
+            <div class="education-content">
+                <h3>Klagg Certificate</h3>
+                <div class="education-institution"><i class="fas fa-award"></i> Technical Certification</div>
+                <div class="education-date"><i class="far fa-calendar"></i> Completed 2019</div>
+                <p>Professional certification in IT domains. Practical applications and industry standards.</p>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="education-content">
+                <h3>Huawei Certification</h3>
+                <div class="education-institution"><i class="fas fa-server"></i> Huawei ICT Academy</div>
+                <div class="education-date"><i class="far fa-calendar"></i> Completed 2021</div>
+                <p>Networking and telecommunications technologies. ICT Infrastructure.</p>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-icon"><i class="fas fa-university"></i></div>
+            <div class="education-content">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <div class="education-institution"><i class="fas fa-building"></i> Mulungushi University</div>
+                <div class="education-date"><i class="far fa-calendar"></i> Expected Graduation: 2026</div>
+                <p>Algorithms, data structures, software engineering, database systems, AI fundamentals.</p>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="education-content">
+                <h3>Professor Nate International</h3>
+                <div class="education-institution"><i class="fas fa-users"></i> Tech Education Initiative</div>
+                <div class="education-date"><i class="far fa-calendar"></i> Founded: 2023</div>
+                <p>Mentoring developers. Focus: Python, Web Development, Mobile Apps, Career Guidance.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Nathan Musonda</div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="CV.html">My CV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

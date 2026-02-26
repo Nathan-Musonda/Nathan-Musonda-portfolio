@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Musonda | Professional Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .resume-page {
+            background-color: #e2e8f0;
+            padding: 60px 0;
+            min-height: calc(100vh - 70px);
+        }
+        
+        .resume-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            color: #0f172a;
+        }
+        
+        .resume-header {
+            background: linear-gradient(145deg, #0b2b3d, #1a4b5f);
+            color: white;
+            padding: 40px;
+        }
+        
+        .resume-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .resume-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .resume-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .resume-contact-item i { color: #b3e5fc; width: 20px; }
+        .resume-contact-item a { color: white; text-decoration: none; }
+        
+        .resume-main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        
+        .resume-left {
+            background-color: #f8fafc;
+            padding: 30px;
+            border-right: 1px solid #dde7f0;
+        }
+        
+        .resume-right {
+            background-color: white;
+            padding: 30px;
+        }
+        
+        .resume-section {
+            margin-bottom: 30px;
+        }
+        
+        .resume-section h2 {
+            font-size: 1.3rem;
+            color: #0e4b62;
+            border-bottom: 3px solid #cbd5e1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .resume-section h2 i { color: #1e6f8f; }
+        
+        .resume-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        
+        .resume-skill {
+            background-color: white;
+            border: 1px solid #b9d5e3;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #12455c;
+        }
+        
+        .resume-skill-cat {
+            font-weight: 600;
+            color: #1f4e6f;
+            margin: 15px 0 8px;
+        }
+        
+        .resume-item {
+            margin-bottom: 20px;
+        }
+        
+        .resume-item h3 {
+            font-size: 1.1rem;
+            color: #1f5875;
+            margin-bottom: 5px;
+        }
+        
+        .resume-item .meta { color: #335b6e; font-weight: 500; }
+        .resume-item ul { margin-top: 10px; padding-left: 20px; color: #1e293b; }
+        
+        .resume-summary {
+            background-color: #f0f7fc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 6px solid #2c7da0;
+        }
+        
+        .resume-objective {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px dashed #9bb8cf;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .resume-main { grid-template-columns: 1fr; }
+            .resume-left { border-right: 0; border-bottom: 1px solid #dde7f0; }
+            .resume-header h1 { font-size: 2rem; }
+            .resume-contact { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code logo-icon"></i>
+                Nathan Musonda <span class="logo-nickname">(Professor Nate)</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="linkedin.html">LinkedIn</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="CV.html" class="active">My CV</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-overlay" id="navOverlay"></div>
+        </div>
+    </header>
+
+    <div class="resume-page">
+        <div class="container">
+            <div class="resume-card">
+                <div class="resume-header">
+                    <h1>NATHAN MUSONDA</h1>
+                    <div class="resume-contact">
+                        <div class="resume-contact-item"><i class="fas fa-map-marker-alt"></i> Lusaka, Zambia</div>
+                        <div class="resume-contact-item"><i class="fas fa-phone-alt"></i> +260 972 021106</div>
+                        <div class="resume-contact-item"><i class="fas fa-envelope"></i> nathanmusonda85@gmail.com</div>
+                        <div class="resume-contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/nathan-musonda</div>
+                        <div class="resume-contact-item"><i class="fab fa-github"></i> github.com/Shock-father</div>
+                    </div>
+                </div>
+                
+                <div class="resume-main">
+                    <div class="resume-left">
+                        <div class="resume-section">
+                            <h2><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
+                            <div class="resume-item">
+                                <h3>BSc in Computer Science</h3>
+                                <div class="meta">Mulungushi University</div>
+                                <div>Expected Graduation: 2026</div>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-section">
+                            <h2><i class="fas fa-code"></i> TECHNICAL SKILLS</h2>
+                            <div class="resume-skill-cat">Languages</div>
+                            <div class="resume-skills">
+                                <span class="resume-skill">Python</span>
+                                <span class="resume-skill">Java</span>
+                                <span class="resume-skill">SQL</span>
+                                <span class="resume-skill">HTML/CSS</span>
+                            </div>
+                            <div class="resume-skill-cat">Frameworks</div>
+                            <div class="resume-skills">
+                                <span class="resume-skill">Flask</span>
+                                <span class="resume-skill">MySQL</span>
+                                <span class="resume-skill">TensorFlow Lite</span>
+                                <span class="resume-skill">Flutter</span>
+                                <span class="resume-skill">Git</span>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-section">
+                            <h2><i class="fas fa-certificate"></i> CERTIFICATIONS</h2>
+                            <div>🔹 Huawei Certification</div>
+                            <div>🔹 Kaggle Certification</div>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-right">
+                        <div class="resume-summary">
+                            Computer Science student with experience in software development, AI applications, and operational roles. Skilled in full-stack systems, mobile AI tools, and data-driven platforms.
+                        </div>
+                        
+                        <div class="resume-section">
+                            <h2><i class="fas fa-briefcase"></i> EXPERIENCE</h2>
+                            <div class="resume-item">
+                                <h3>Computer Science Intern</h3>
+                                <div class="meta">Mulungushi University</div>
+                                <ul><li>Software development and system-related projects</li></ul>
+                            </div>
+                            <div class="resume-item">
+                                <h3>Assistant Director</h3>
+                                <div class="meta">AMBA Logistics Zambia LTD</div>
+                                <ul><li>Operational planning and logistics coordination</li></ul>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-section">
+                            <h2><i class="fas fa-folder-open"></i> PROJECTS</h2>
+                            <div class="resume-item">
+                                <h3>EduGemma – Offline AI Learning Assistant</h3>
+                                <ul><li>AI learning tool for low-connectivity environments</li></ul>
+                            </div>
+                            <div class="resume-item">
+                                <h3>Car Parts Management System</h3>
+                                <ul><li>Full-stack inventory system with Flask and MySQL</li></ul>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-objective">
+                            <strong>Objective:</strong> Aspiring to grow into leadership roles in AI, Networking, and Software Engineering.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Nathan Musonda</div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Musonda | Software Developer & Tech Educator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            background: linear-gradient(135deg, rgba(10, 25, 49, 0.9) 0%, rgba(26, 44, 71, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary) 0%, var(--secondary) 33%, var(--accent) 33%, var(--accent) 66%, var(--primary) 66%, var(--primary) 100%);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .hero-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--dark-blue-light);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .nickname {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .specialty-tag {
+            background-color: rgba(44,95,45,0.2);
+            color: var(--secondary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(44,95,45,0.4);
+        }
+
+        .specialty-tag.green { background-color: rgba(151,188,98,0.2); color: var(--secondary); border-color: rgba(151,188,98,0.4); }
+        .specialty-tag.yellow { background-color: rgba(252,209,22,0.25); color: var(--accent); border-color: rgba(252,209,22,0.5); }
+
+        .social-links-bar {
+            background-color: var(--dark-blue-light);
+            padding: 12px 0;
+        }
+
+        .social-links-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+
+        .social-link-item:hover { color: var(--accent); }
+
+        .quick-previews {
+            padding: 60px 0;
+            background-color: var(--dark-blue);
+        }
+
+        .quick-previews h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .preview-card {
+            background-color: var(--dark-blue-light);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .preview-card:hover { transform: translateY(-5px); }
+
+        .preview-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .preview-card h3 { margin-bottom: 10px; }
+        .btn-small {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content { flex-direction: row; text-align: left; }
+            .hero-text { text-align: left; }
+            .specialties { justify-content: flex-start; }
+            .hero-image img { width: 350px; height: 350px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code logo-icon"></i>
+                Nathan Musonda <span class="logo-nickname">(Professor Nate)</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="linkedin.html">LinkedIn</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="CV.html">My CV</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-overlay" id="navOverlay"></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-image">
+                <img src="images/20260106_092454.jpg" alt="Nathan Musonda">
+            </div>
+            <div class="hero-text">
+                <h1>Nathan Musonda</h1>
+                <div class="nickname">"Professor Nate" - Software Developer & Tech Educator</div>
+                <p>Computer Science undergraduate and hands-on software developer with experience building full-stack web systems, mobile applications, and applied AI solutions. Focused on practical software for education, logistics, and data-driven platforms.</p>
+               
+                <div class="specialties">
+                    <span class="specialty-tag">Full-Stack Development</span>
+                    <span class="specialty-tag green">Python Programming</span>
+                    <span class="specialty-tag">Mobile Apps</span>
+                    <span class="specialty-tag yellow">AI/ML Integration</span>
+                    <span class="specialty-tag green">Database Design</span>
+                </div>
+               
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-green">Hire Me</a>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="social-links-bar">
+        <div class="container social-links-container">
+            <a href="https://github.com/Shock-father" target="_blank" class="social-link-item">
+                <i class="fab fa-github"></i> <span>GitHub: Shock-father</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank" class="social-link-item">
+                <i class="fab fa-linkedin"></i> <span>LinkedIn: Nathan Musonda</span>
+            </a>
+            <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank" class="social-link-item">
+                <i class="fab fa-tiktok"></i> <span>TikTok: @nathannatemusonda</span>
+            </a>
+            <a href="https://wa.me/260972021106" target="_blank" class="social-link-item">
+                <i class="fab fa-whatsapp"></i> <span>WhatsApp: +260 972 021 106</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="quick-previews">
+        <div class="container">
+            <h2>Explore My Portfolio</h2>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Expertise</h3>
+                    <p>Full-stack development, Python, Mobile Apps, AI/ML, and more</p>
+                    <a href="expertise.html" class="btn-small">View Expertise →</a>
+                </div>
+                <div class="preview-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub Projects</h3>
+                    <p>Academic systems, logistics platforms, and AI solutions</p>
+                    <a href="github.html" class="btn-small">View Projects →</a>
+                </div>
+                <div class="preview-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>Primary through University, Certifications, and Tech Education</p>
+                    <a href="education.html" class="btn-small">View Education →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
+                    <p>Computer Science Student & Software Developer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
