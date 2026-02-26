@@ -8,7 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .contact-page { padding: 60px 0; }
+        .contact-page { 
+            padding: 60px 0;
+            background-color: var(--midnight-blue);
+        }
         
         .contact-grid {
             display: grid;
@@ -20,7 +23,8 @@
         
         .contact-info-card,
         .contact-form-card {
-            background-color: var(--dark-blue-light);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 16px;
             padding: 40px;
         }
@@ -28,7 +32,7 @@
         .contact-info-card h2,
         .contact-form-card h2 {
             font-size: 1.8rem;
-            color: var(--primary);
+            color: var(--accent-gold);
             margin-bottom: 30px;
         }
         
@@ -41,39 +45,51 @@
         
         .contact-detail-item i {
             font-size: 1.5rem;
-            color: var(--primary);
+            color: var(--accent-gold);
             width: 30px;
         }
         
-        .contact-detail-item h4 { color: white; margin-bottom: 5px; }
-        .contact-detail-item p { color: var(--text-muted); }
+        .contact-detail-item h4 { 
+            color: var(--soft-white); 
+            margin-bottom: 5px; 
+        }
         
-        .form-group { margin-bottom: 20px; }
+        .contact-detail-item p { 
+            color: var(--muted-white); 
+        }
+        
+        .form-group { 
+            margin-bottom: 20px; 
+        }
         
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 15px;
-            background-color: var(--dark-blue-lighter);
-            border: 1px solid rgba(255,255,255,0.1);
+            background-color: var(--midnight-blue);
+            border: 1px solid var(--medium-gray);
             border-radius: 8px;
-            color: var(--text-light);
+            color: var(--soft-white);
             font-size: 1rem;
+            transition: all 0.3s;
         }
-        
-        .form-group textarea { height: 150px; resize: vertical; }
         
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary);
+            border-color: var(--accent-gold);
+        }
+        
+        .form-group textarea { 
+            height: 150px; 
+            resize: vertical; 
         }
         
         .submit-btn {
-            background-color: var(--primary);
-            color: white;
+            background-color: var(--accent-gold);
+            color: var(--pure-black);
             border: none;
             padding: 15px 30px;
             border-radius: 8px;
@@ -85,8 +101,9 @@
         }
         
         .submit-btn:hover {
-            background-color: #1e4a1f;
+            background-color: #e6b800;
             transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         .form-message {
@@ -97,24 +114,42 @@
         }
         
         .form-message.success {
-            background-color: rgba(44,95,45,0.2);
-            border: 1px solid rgba(44,95,45,0.3);
-            color: var(--secondary);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
             display: block;
         }
         
         .form-message.error {
-            background-color: rgba(239,51,64,0.2);
-            border: 1px solid rgba(239,51,64,0.3);
-            color: #ef3340;
+            background-color: var(--midnight-light);
+            border: 1px solid #ff4444;
+            color: #ff4444;
             display: block;
         }
         
-        .btn-loading { display: none; }
-        .btn-loading i { margin-right: 8px; }
+        .btn-loading { 
+            display: none; 
+        }
+        
+        .btn-loading i { 
+            margin-right: 8px; 
+        }
+        
+        .contact-note {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--midnight-blue);
+            border: 1px solid var(--medium-gray);
+            border-radius: 8px;
+            color: var(--muted-white);
+            font-style: italic;
+        }
         
         @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr; }
+            .contact-grid { 
+                grid-template-columns: 1fr; 
+                gap: 30px;
+            }
         }
     </style>
 </head>
@@ -212,6 +247,11 @@
                             <p>@nathannatemusonda</p>
                         </div>
                     </div>
+                    
+                    <div class="contact-note">
+                        <i class="fas fa-clock" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                        I typically respond within 24 hours. Let's build something amazing together!
+                    </div>
                 </div>
                 
                 <div class="contact-form-card">
@@ -264,25 +304,40 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">Nathan Musonda</div>
+                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
+                    <p>Computer Science Student & Software Developer</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                        <li><a href="linkedin.html">LinkedIn</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="CV.html">My CV</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Shock-father" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/260972021106" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Nathan Musonda</p>
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script>
-        // Contact form handling
         document.getElementById('contactForm')?.addEventListener('submit', function(e) {
             const submitBtn = document.getElementById('submitBtn');
             const btnText = submitBtn.querySelector('.btn-text');
@@ -293,11 +348,8 @@
             btnText.style.display = 'none';
             btnLoading.style.display = 'inline-block';
             submitBtn.disabled = true;
-            
-            // Form will submit to Formspree
         });
         
-        // Check for success/error in URL
         window.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
             const formMessage = document.getElementById('formMessage');
