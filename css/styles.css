@@ -1,3 +1,114 @@
+/* Add these to your existing styles.css */
+
+/* ===== TRANSPARENT BACKGROUND WITH IMAGE ===== */
+body {
+    background-image: url('../images/1223.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Dark overlay for readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark overlay - adjust opacity as needed */
+    z-index: -1;
+}
+
+/* Make content sections slightly transparent */
+header, 
+section, 
+footer,
+.card,
+.expertise-card,
+.github-profile-header,
+.github-stat-card,
+.github-project-card,
+.linkedin-profile-header,
+.linkedin-cert-card,
+.linkedin-activity,
+.education-item,
+.contact-info-card,
+.contact-form-card,
+.cv-card,
+.cv-left,
+.cv-right,
+.cv-header {
+    background-color: rgba(21, 30, 44, 0.85) !important; /* midnight-light with transparency */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Make header more solid for navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Make footer more solid */
+footer {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Page header with transparency */
+.page-header {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(11, 15, 26, 0.8));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Social links bar with transparency */
+.social-links-bar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Hero section with transparency */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(11, 15, 26, 0.7)) !important;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+/* Buttons with slight transparency */
+.btn {
+    background-color: rgba(21, 30, 44, 0.9);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.btn-gold {
+    background-color: rgba(255, 215, 0, 0.9);
+}
+
+/* Cards with transparency */
+.preview-card,
+.service-card,
+.expertise-card,
+.github-project-card {
+    background-color: rgba(21, 30, 44, 0.8) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Ensure text remains readable */
+h1, h2, h3, h4, h5, h6, p, span, a {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 * {
     margin: 0;
     padding: 0;
