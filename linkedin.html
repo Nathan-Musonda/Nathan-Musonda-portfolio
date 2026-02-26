@@ -8,32 +8,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .linkedin-page { padding: 60px 0; }
+        .linkedin-page { 
+            padding: 60px 0;
+            background-color: var(--midnight-blue);
+        }
         
         .linkedin-profile-header {
-            background-color: var(--dark-blue-light);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 16px;
             padding: 40px;
             margin-bottom: 40px;
             display: flex;
             align-items: center;
             gap: 40px;
-            border-left: 6px solid var(--linkedin-blue);
         }
         
         .linkedin-icon-large {
             font-size: 5rem;
-            color: var(--linkedin-blue);
+            color: var(--accent-gold);
         }
         
         .linkedin-user-info h2 {
             font-size: 2.2rem;
-            color: white;
+            color: var(--soft-white);
             margin-bottom: 10px;
         }
         
         .linkedin-headline {
-            color: var(--text-muted);
+            color: var(--muted-white);
             font-size: 1.1rem;
             margin-bottom: 20px;
         }
@@ -46,36 +49,44 @@
         }
         
         .linkedin-cert-card {
-            background-color: var(--dark-blue-light);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 12px;
             padding: 25px;
-            border-left: 5px solid var(--linkedin-blue);
             transition: all 0.3s;
         }
         
-        .linkedin-cert-card:hover { transform: translateY(-5px); }
+        .linkedin-cert-card:hover { 
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
         
         .linkedin-cert-icon {
             font-size: 2rem;
-            color: var(--linkedin-blue);
+            color: var(--accent-gold);
             margin-bottom: 15px;
         }
         
         .linkedin-cert-card h3 {
             font-size: 1.2rem;
             margin-bottom: 10px;
-            color: white;
+            color: var(--soft-white);
+        }
+        
+        .linkedin-cert-card p {
+            color: var(--muted-white);
         }
         
         .linkedin-activity {
-            background-color: var(--dark-blue-light);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 16px;
             padding: 30px;
         }
         
         .linkedin-activity h3 {
             font-size: 1.5rem;
-            color: var(--linkedin-blue);
+            color: var(--accent-gold);
             margin-bottom: 25px;
             display: flex;
             align-items: center;
@@ -86,19 +97,33 @@
             display: flex;
             gap: 15px;
             padding: 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid var(--medium-gray);
         }
         
         .linkedin-activity-item:last-child { border-bottom: none; }
         
         .linkedin-activity-icon {
-            color: var(--linkedin-blue);
+            color: var(--accent-gold);
             font-size: 1.2rem;
         }
         
+        .linkedin-activity-item h4 {
+            color: var(--soft-white);
+            margin-bottom: 5px;
+        }
+        
+        .linkedin-activity-item p {
+            color: var(--muted-white);
+        }
+        
         @media (max-width: 768px) {
-            .linkedin-profile-header { flex-direction: column; text-align: center; }
-            .linkedin-certs-grid { grid-template-columns: 1fr; }
+            .linkedin-profile-header { 
+                flex-direction: column; 
+                text-align: center; 
+            }
+            .linkedin-certs-grid { 
+                grid-template-columns: 1fr; 
+            }
         }
     </style>
 </head>
@@ -119,7 +144,7 @@
                     <li><a href="github.html">GitHub</a></li>
                     <li><a href="linkedin.html" class="active">LinkedIn</a></li>
                     <li><a href="education.html">Education</a></li>
-                    <li><a href="contact.html">Resume</a></li>
+                    <li><a href="CV.html">My CV</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -128,6 +153,13 @@
         </div>
     </header>
 
+    <div class="page-header">
+        <div class="container">
+            <h1>LinkedIn Profile</h1>
+            <p>My professional network and certifications</p>
+        </div>
+    </div>
+
     <div class="linkedin-page">
         <div class="container">
             <div class="linkedin-profile-header">
@@ -135,7 +167,7 @@
                 <div class="linkedin-user-info">
                     <h2>Nathan Musonda</h2>
                     <div class="linkedin-headline">Computer Science Student | Software Developer | Tech Educator</div>
-                    <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank" class="btn btn-linkedin">
+                    <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank" class="btn btn-gold">
                         <i class="fab fa-linkedin"></i> Connect on LinkedIn
                     </a>
                 </div>
@@ -145,33 +177,45 @@
                 <div class="linkedin-cert-card">
                     <div class="linkedin-cert-icon"><i class="fas fa-network-wired"></i></div>
                     <h3>Professional Network</h3>
-                    <p>Connected with developers and industry professionals.</p>
+                    <p>Connected with developers, tech companies, and industry professionals across Africa and beyond.</p>
                 </div>
                 <div class="linkedin-cert-card">
                     <div class="linkedin-cert-icon"><i class="fas fa-code"></i></div>
                     <h3>Skills Showcase</h3>
-                    <p>Python, Web Development, Mobile Apps, Database Management.</p>
+                    <p>Python, Web Development, Mobile Applications, Database Management, and Software Engineering.</p>
                 </div>
                 <div class="linkedin-cert-card">
                     <div class="linkedin-cert-icon"><i class="fas fa-briefcase"></i></div>
                     <h3>Career Development</h3>
-                    <p>Building professional presence in tech community.</p>
+                    <p>Building professional presence in tech community. Seeking collaboration and opportunities.</p>
                 </div>
             </div>
             
             <div class="linkedin-activity">
                 <h3><i class="fab fa-linkedin"></i> Professional Focus Areas</h3>
+                
                 <div class="linkedin-activity-item">
                     <div class="linkedin-activity-icon"><i class="fas fa-laptop-code"></i></div>
-                    <div><h4>Software Development Projects</h4><p>Academic systems, logistics platforms, and mobile applications.</p></div>
+                    <div>
+                        <h4>Software Development Projects</h4>
+                        <p>Academic systems, logistics platforms, and mobile applications with modern technologies.</p>
+                    </div>
                 </div>
+                
                 <div class="linkedin-activity-item">
                     <div class="linkedin-activity-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div><h4>Tech Education Initiative</h4><p>Professor Nate International - mentoring developers.</p></div>
+                    <div>
+                        <h4>Tech Education Initiative</h4>
+                        <p>Professor Nate International - mentoring developers and creating learning resources.</p>
+                    </div>
                 </div>
+                
                 <div class="linkedin-activity-item">
                     <div class="linkedin-activity-icon"><i class="fas fa-hands-helping"></i></div>
-                    <div><h4>Collaboration & Networking</h4><p>Engaging with Zambian and international tech community.</p></div>
+                    <div>
+                        <h4>Collaboration & Networking</h4>
+                        <p>Engaging with Zambian and international tech community for knowledge exchange.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -181,18 +225,34 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">Nathan Musonda</div>
+                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
+                    <p>Computer Science Student & Software Developer</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                        <li><a href="linkedin.html">LinkedIn</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="CV.html">My CV</a></li>
+                        <li><a href="about.html">About Me</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Shock-father" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/260972021106" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Nathan Musonda</p>
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
             </div>
         </div>
     </footer>
