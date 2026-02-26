@@ -9,38 +9,38 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .github-page {
-            background-color: var(--github-black);
+            background-color: var(--midnight-blue);
             min-height: calc(100vh - 70px);
             padding: 60px 0;
         }
         
         .github-profile-header {
-            background-color: #161b22;
+            background-color: var(--midnight-light);
             border-radius: 16px;
             padding: 40px;
             margin-bottom: 40px;
             display: flex;
             align-items: center;
             gap: 40px;
-            border: 1px solid #30363d;
+            border: 1px solid var(--medium-gray);
         }
         
         .github-avatar-large {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 5px solid var(--accent);
+            border: 4px solid var(--accent-gold);
             object-fit: cover;
         }
         
         .github-user-info h2 {
             font-size: 2.2rem;
-            color: white;
+            color: var(--soft-white);
             margin-bottom: 10px;
         }
         
         .github-username {
-            color: #8b949e;
+            color: var(--muted-white);
             font-size: 1.2rem;
             margin-bottom: 15px;
         }
@@ -53,18 +53,27 @@
         }
         
         .github-stat-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 12px;
             padding: 25px;
             text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .github-stat-card:hover {
+            border-color: var(--accent-gold);
         }
         
         .github-stat-number {
             font-size: 2rem;
             font-weight: 700;
-            color: white;
+            color: var(--accent-gold);
             margin-bottom: 8px;
+        }
+        
+        .github-stat-label {
+            color: var(--muted-white);
         }
         
         .github-projects-grid {
@@ -74,32 +83,40 @@
         }
         
         .github-project-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 12px;
             padding: 25px;
             transition: all 0.3s;
         }
         
         .github-project-card:hover {
+            border-color: var(--accent-gold);
             transform: translateY(-5px);
-            border-color: #238636;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
         .github-project-title {
             font-size: 1.3rem;
-            color: white;
+            color: var(--soft-white);
             margin-bottom: 10px;
         }
         
         .github-project-badge {
             display: inline-block;
-            background-color: rgba(35,134,54,0.2);
-            color: #238636;
+            background-color: var(--midnight-blue);
+            color: var(--accent-gold);
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
             margin-bottom: 15px;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .github-project-desc {
+            color: var(--muted-white);
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
         
         .github-project-tech {
@@ -110,11 +127,12 @@
         }
         
         .github-tech-tag {
-            background-color: rgba(56,139,253,0.1);
-            color: #58a6ff;
+            background-color: var(--midnight-blue);
+            color: var(--muted-white);
             padding: 4px 10px;
             border-radius: 15px;
             font-size: 0.8rem;
+            border: 1px solid var(--medium-gray);
         }
         
         @media (max-width: 768px) {
@@ -164,7 +182,7 @@
                 <div class="github-user-info">
                     <h2>Nathan Musonda (Shock-father)</h2>
                     <div class="github-username">@Shock-father · Computer Science Student</div>
-                    <a href="https://github.com/Shock-father" target="_blank" class="btn btn-github">
+                    <a href="https://github.com/Shock-father" target="_blank" class="btn btn-gold">
                         <i class="fab fa-github"></i> View GitHub Profile
                     </a>
                 </div>
@@ -173,29 +191,29 @@
             <div class="github-stats-grid">
                 <div class="github-stat-card">
                     <div class="github-stat-number">Python</div>
-                    <div>Primary Language</div>
+                    <div class="github-stat-label">Primary Language</div>
                 </div>
                 <div class="github-stat-card">
                     <div class="github-stat-number">10+</div>
-                    <div>Projects</div>
+                    <div class="github-stat-label">Projects</div>
                 </div>
                 <div class="github-stat-card">
                     <div class="github-stat-number">Active</div>
-                    <div>Development</div>
+                    <div class="github-stat-label">Development</div>
                 </div>
                 <div class="github-stat-card">
                     <div class="github-stat-number">2021</div>
-                    <div>Joined GitHub</div>
+                    <div class="github-stat-label">Joined GitHub</div>
                 </div>
             </div>
             
-            <h2 style="color: white; margin-bottom: 30px;">Featured Projects</h2>
+            <h2 style="color: var(--soft-white); text-align: left; margin-bottom: 30px;">Featured Projects</h2>
             
             <div class="github-projects-grid">
                 <div class="github-project-card">
                     <h3 class="github-project-title">Academic Management Systems</h3>
                     <span class="github-project-badge">Education</span>
-                    <p>Complete academic systems with Flask and MySQL.</p>
+                    <p class="github-project-desc">Complete academic systems for institutions including student portals, grade management, and administrative dashboards built with Flask and MySQL.</p>
                     <div class="github-project-tech">
                         <span class="github-tech-tag">Python</span>
                         <span class="github-tech-tag">Flask</span>
@@ -204,31 +222,34 @@
                 </div>
                 
                 <div class="github-project-card">
-                    <h3 class="github-project-title">Logistics Platforms</h3>
+                    <h3 class="github-project-title">Logistics & Business Platforms</h3>
                     <span class="github-project-badge">Business</span>
-                    <p>Inventory tracking and automation tools.</p>
+                    <p class="github-project-desc">Custom logistics management systems, inventory tracking, and business automation tools designed for Zambian market needs.</p>
                     <div class="github-project-tech">
                         <span class="github-tech-tag">Django</span>
                         <span class="github-tech-tag">PostgreSQL</span>
+                        <span class="github-tech-tag">REST API</span>
                     </div>
                 </div>
                 
                 <div class="github-project-card">
-                    <h3 class="github-project-title">Mobile Apps</h3>
+                    <h3 class="github-project-title">Mobile Applications</h3>
                     <span class="github-project-badge">Cross-Platform</span>
-                    <p>Flutter applications with Firebase.</p>
+                    <p class="github-project-desc">Flutter and Android applications with practical features, clean UI/UX, and integration with backend services for various use cases.</p>
                     <div class="github-project-tech">
                         <span class="github-tech-tag">Flutter</span>
                         <span class="github-tech-tag">Dart</span>
+                        <span class="github-tech-tag">Firebase</span>
                     </div>
                 </div>
                 
                 <div class="github-project-card">
-                    <h3 class="github-project-title">AI/ML Solutions</h3>
+                    <h3 class="github-project-title">AI/ML Integrated Solutions</h3>
                     <span class="github-project-badge">AI/ML</span>
-                    <p>TensorFlow Lite and scikit-learn implementations.</p>
+                    <p class="github-project-desc">Practical machine learning implementations including TensorFlow Lite models for mobile deployment and data analysis tools.</p>
                     <div class="github-project-tech">
                         <span class="github-tech-tag">TensorFlow</span>
+                        <span class="github-tech-tag">scikit-learn</span>
                         <span class="github-tech-tag">Python</span>
                     </div>
                 </div>
@@ -240,18 +261,34 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">Nathan Musonda</div>
+                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
+                    <p>Computer Science Student & Software Developer</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                        <li><a href="linkedin.html">LinkedIn</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="CV.html">My CV</a></li>
+                        <li><a href="about.html">About Me</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Shock-father" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/260972021106" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Nathan Musonda</p>
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
             </div>
         </div>
     </footer>
