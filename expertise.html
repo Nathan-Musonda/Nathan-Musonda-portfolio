@@ -16,46 +16,39 @@
         }
         
         .expertise-card {
-            background-color: var(--dark-blue-light);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 16px;
-            padding: 30px;
+            padding: 35px 25px;
             text-align: center;
             transition: all 0.3s;
-            border-top: 5px solid var(--primary);
         }
         
-        .expertise-card:nth-child(2) { border-top-color: var(--secondary); }
-        .expertise-card:nth-child(3) { border-top-color: var(--accent); }
-        .expertise-card:nth-child(4) { border-top-color: #0066B3; }
-        .expertise-card:nth-child(5) { border-top-color: #238636; }
-        .expertise-card:nth-child(6) { border-top-color: var(--linkedin-blue); }
-        
         .expertise-card:hover {
+            border-color: var(--accent-gold);
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
         
         .expertise-icon {
             font-size: 3rem;
-            color: var(--primary);
+            color: var(--accent-gold);
             margin-bottom: 20px;
         }
-        
-        .expertise-card:nth-child(2) .expertise-icon { color: var(--secondary); }
-        .expertise-card:nth-child(3) .expertise-icon { color: var(--accent); }
-        .expertise-card:nth-child(4) .expertise-icon { color: #0066B3; }
-        .expertise-card:nth-child(5) .expertise-icon { color: #238636; }
-        .expertise-card:nth-child(6) .expertise-icon { color: var(--linkedin-blue); }
         
         .expertise-card h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--text-light);
+            color: var(--soft-white);
         }
         
         .expertise-card p {
-            color: var(--text-muted);
-            line-height: 1.6;
+            color: var(--muted-white);
+            line-height: 1.7;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--pure-black), var(--midnight-blue));
         }
     </style>
 </head>
@@ -98,26 +91,31 @@
             <h3>Full-Stack Web Development</h3>
             <p>Building complete web applications with Flask/Django backends and modern frontends. Specializing in academic systems, logistics platforms, and data-driven web solutions.</p>
         </div>
+        
         <div class="expertise-card">
             <div class="expertise-icon"><i class="fab fa-python"></i></div>
             <h3>Python Programming</h3>
             <p>Expert Python development for automation, data analysis, backend APIs, and AI/ML integration. Creating efficient, scalable solutions for various business needs.</p>
         </div>
+        
         <div class="expertise-card">
             <div class="expertise-icon"><i class="fas fa-mobile-alt"></i></div>
             <h3>Mobile Application Development</h3>
             <p>Developing cross-platform mobile applications with Flutter and native Android solutions. Focus on user-friendly interfaces and seamless functionality.</p>
         </div>
+        
         <div class="expertise-card">
             <div class="expertise-icon"><i class="fas fa-brain"></i></div>
             <h3>AI/ML Integration</h3>
             <p>Implementing practical machine learning solutions with TensorFlow Lite and scikit-learn. Specializing in applied AI for real-world business problems.</p>
         </div>
+        
         <div class="expertise-card">
             <div class="expertise-icon"><i class="fas fa-database"></i></div>
             <h3>Database Design & Administration</h3>
             <p>Designing, implementing, and optimizing MySQL and PostgreSQL databases. Ensuring data integrity, security, and efficient access for applications.</p>
         </div>
+        
         <div class="expertise-card">
             <div class="expertise-icon"><i class="fas fa-chalkboard-teacher"></i></div>
             <h3>Tech Education & Mentoring</h3>
@@ -137,12 +135,26 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                        <li><a href="linkedin.html">LinkedIn</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="CV.html">My CV</a></li>
+                        <li><a href="about.html">About Me</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Shock-father" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/260972021106" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Nathan Musonda</p>
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
             </div>
         </div>
     </footer>
