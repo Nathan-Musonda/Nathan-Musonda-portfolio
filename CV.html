@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .cv-page {
-            background-color: var(--pure-black);
             padding: 60px 0;
             min-height: calc(100vh - 70px);
         }
@@ -17,18 +16,21 @@
         .cv-card {
             max-width: 1000px;
             margin: 0 auto;
-            background-color: var(--midnight-blue);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(11, 15, 26, 0.7) !important;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.5);
             overflow: hidden;
         }
         
         .cv-header {
-            background: linear-gradient(135deg, var(--pure-black), var(--midnight-light));
-            color: var(--soft-white);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(21, 30, 44, 0.8));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 40px;
-            border-bottom: 1px solid var(--medium-gray);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
         }
         
         .cv-header h1 {
@@ -47,7 +49,7 @@
             gap: 30px;
             margin-top: 25px;
             padding-top: 25px;
-            border-top: 1px solid var(--medium-gray);
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
         }
         
         .cv-contact-item {
@@ -78,13 +80,17 @@
         }
         
         .cv-left {
-            background-color: var(--midnight-light);
+            background-color: rgba(21, 30, 44, 0.6) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 30px;
-            border-right: 1px solid var(--medium-gray);
+            border-right: 1px solid rgba(255, 215, 0, 0.3);
         }
         
         .cv-right {
-            background-color: var(--midnight-blue);
+            background-color: rgba(11, 15, 26, 0.5) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 30px;
         }
         
@@ -95,7 +101,7 @@
         .cv-section h2 {
             font-size: 1.3rem;
             color: var(--accent-gold);
-            border-bottom: 2px solid var(--medium-gray);
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
             padding-bottom: 10px;
             margin-bottom: 20px;
             display: flex;
@@ -115,18 +121,20 @@
         }
         
         .cv-skill {
-            background-color: var(--midnight-blue);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             padding: 5px 15px;
             border-radius: 30px;
             font-size: 0.85rem;
             color: var(--muted-white);
             transition: all 0.3s;
+            backdrop-filter: blur(5px);
         }
         
         .cv-skill:hover {
             border-color: var(--accent-gold);
             color: var(--accent-gold);
+            background-color: rgba(0, 0, 0, 0.7);
         }
         
         .cv-skill-cat {
@@ -168,8 +176,10 @@
         }
         
         .cv-summary {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.5) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             padding: 20px;
             border-radius: 12px;
             margin-bottom: 30px;
@@ -178,8 +188,10 @@
         }
         
         .cv-objective {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.5) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             padding: 20px;
             border-radius: 12px;
             margin-top: 30px;
@@ -198,7 +210,7 @@
             
             .cv-left {
                 border-right: 0;
-                border-bottom: 1px solid var(--medium-gray);
+                border-bottom: 1px solid rgba(255, 215, 0, 0.3);
             }
             
             .cv-header h1 {
