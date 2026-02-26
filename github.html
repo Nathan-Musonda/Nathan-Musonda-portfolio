@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .github-page {
-            background-color: var(--midnight-blue);
-            min-height: calc(100vh - 70px);
             padding: 60px 0;
         }
         
         .github-profile-header {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.75) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 16px;
             padding: 40px;
             margin-bottom: 40px;
@@ -25,7 +25,6 @@
             gap: 40px;
         }
         
-        /* Updated to use your local image */
         .github-avatar-large {
             width: 150px;
             height: 150px;
@@ -55,8 +54,10 @@
         }
         
         .github-stat-card {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.7) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 12px;
             padding: 25px;
             text-align: center;
@@ -65,6 +66,7 @@
         
         .github-stat-card:hover {
             border-color: var(--accent-gold);
+            background-color: rgba(21, 30, 44, 0.9) !important;
         }
         
         .github-stat-number {
@@ -85,8 +87,10 @@
         }
         
         .github-project-card {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.7) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 12px;
             padding: 25px;
             transition: all 0.3s;
@@ -96,6 +100,7 @@
             border-color: var(--accent-gold);
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background-color: rgba(21, 30, 44, 0.9) !important;
         }
         
         .github-project-title {
@@ -106,13 +111,13 @@
         
         .github-project-badge {
             display: inline-block;
-            background-color: var(--midnight-blue);
+            background-color: rgba(0, 0, 0, 0.5);
             color: var(--accent-gold);
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
             margin-bottom: 15px;
-            border: 1px solid var(--medium-gray);
+            border: 1px solid var(--accent-gold);
         }
         
         .github-project-desc {
@@ -129,12 +134,12 @@
         }
         
         .github-tech-tag {
-            background-color: var(--midnight-blue);
+            background-color: rgba(0, 0, 0, 0.5);
             color: var(--muted-white);
             padding: 4px 10px;
             border-radius: 15px;
             font-size: 0.8rem;
-            border: 1px solid var(--medium-gray);
+            border: 1px solid rgba(255, 215, 0, 0.3);
         }
         
         @media (max-width: 768px) {
@@ -187,8 +192,7 @@
     <div class="github-page">
         <div class="container">
             <div class="github-profile-header">
-                <!-- REPLACED with your local image - 1223.jpg -->
-                <img src="images/1235.jpeg" alt="Nathan Musonda - Professor Nate" class="github-avatar-large">
+                <img src="images/1223.jpg" alt="Nathan Musonda - Professor Nate" class="github-avatar-large">
                 <div class="github-user-info">
                     <h2>Nathan Musonda (Shock-father)</h2>
                     <div class="github-username">@Shock-father · Computer Science Student</div>
