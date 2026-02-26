@@ -8,7 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .about-page { padding: 60px 0; }
+        .about-page { 
+            padding: 60px 0;
+            background-color: var(--midnight-blue);
+        }
         
         .about-content {
             display: grid;
@@ -26,12 +29,13 @@
             width: 100%;
             max-width: 450px;
             border-radius: 20px;
-            border: 5px solid var(--primary);
+            border: 4px solid var(--medium-gray);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
+            transition: all 0.3s;
         }
         
         .about-image img:hover {
+            border-color: var(--accent-gold);
             transform: scale(1.02);
         }
         
@@ -40,18 +44,17 @@
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: var(--primary);
-            color: white;
+            background-color: var(--pure-black);
+            color: var(--accent-gold);
             padding: 8px 25px;
             border-radius: 50px;
             font-weight: 600;
             white-space: nowrap;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 2px solid var(--accent);
+            border: 2px solid var(--accent-gold);
         }
         
         .about-text h3 {
-            color: var(--accent);
+            color: var(--accent-gold);
             margin: 30px 0 10px;
             font-size: 1.3rem;
         }
@@ -59,17 +62,25 @@
         .about-text h3:first-of-type { margin-top: 0; }
         
         .about-text p {
-            color: var(--text-muted);
+            color: var(--muted-white);
             line-height: 1.8;
             margin-bottom: 15px;
         }
         
         .about-highlight {
-            background-color: var(--dark-blue-light);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             padding: 20px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid var(--accent);
+            border-left: 4px solid var(--accent-gold);
+            color: var(--soft-white);
+            font-style: italic;
+        }
+        
+        .about-highlight i {
+            color: var(--accent-gold);
+            margin-right: 10px;
         }
         
         @media (max-width: 768px) {
@@ -83,9 +94,6 @@
                 text-align: center;
                 font-size: 0.9rem;
                 padding: 8px 15px;
-            }
-            .about-image img {
-                max-width: 100%;
             }
         }
     </style>
@@ -107,7 +115,7 @@
                     <li><a href="github.html">GitHub</a></li>
                     <li><a href="linkedin.html">LinkedIn</a></li>
                     <li><a href="education.html">Education</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="CV.html">My CV</a></li>
                     <li><a href="about.html" class="active">About Me</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -123,39 +131,40 @@
         </div>
     </div>
 
-    <div class="about-page container">
-        <div class="about-content">
-            <div class="about-image">
-                <div class="zambian-connection">
-                    <i class="fas fa-globe-africa"></i> Professor Nate International
-                </div>
-                <!-- YOUR LOCAL IMAGE PATH -->
-                <img src="images/1223.jpeg" alt="Nathan Musonda - Professor Nate">
-            </div>
-            
-            <div class="about-text">
-                <p>Hello! I'm <strong>Nathan Musonda</strong> (GitHub: <strong>Shock-father</strong>), known professionally as <strong>"Professor Nate"</strong>. I'm a Zambian Computer Science student and software developer with a passion for creating practical technology solutions that make a difference.</p>
-                
-                <div class="about-highlight">
-                    <i class="fas fa-quote-left" style="color: var(--accent); margin-right: 10px;"></i>
-                    I believe in building technology that solves real problems for real people, especially in the Zambian context.
+    <div class="about-page">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="zambian-connection">
+                        <i class="fas fa-globe-africa"></i> Professor Nate International
+                    </div>
+                    <img src="images/1223.jpeg" alt="Nathan Musonda - Professor Nate">
                 </div>
                 
-                <h3><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> Educational Journey</h3>
-                <p>My educational journey began at North Park Private School, followed by boarding school at Moomba Secondary School where I developed discipline and leadership skills. I hold professional certifications including a Klagg Certificate and Huawei Certification in networking and telecommunications.</p>
-                
-                <h3><i class="fas fa-chalkboard-teacher" style="margin-right: 10px;"></i> Professor Nate International</h3>
-                <p>Through my education initiative, I focus on bridging the gap between academic knowledge and practical software development. I mentor aspiring developers and create resources that help others build real-world programming skills. My goal is to empower the next generation of Zambian tech talent.</p>
-                
-                <h3><i class="fas fa-laptop-code" style="margin-right: 10px;"></i> Current Focus</h3>
-                <p>I'm currently pursuing my Bachelor's in Computer Science while working on full-stack projects, mobile applications, and AI integrations. I'm particularly interested in creating solutions for education, logistics, and business needs in Zambia.</p>
-                
-                <h3><i class="fas fa-cogs" style="margin-right: 10px;"></i> Technology Stack</h3>
-                <p>Python is my primary language, complemented by Flask/Django for web development, Flutter for mobile apps, MySQL/PostgreSQL for databases, and TensorFlow for AI/ML implementations. I'm always exploring new technologies to expand my toolkit.</p>
-                
-                <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
-                    <a href="resume.html" class="btn">View Resume</a>
-                    <a href="contact.html" class="btn btn-green">Start a Project</a>
+                <div class="about-text">
+                    <p>Hello! I'm <strong style="color: var(--accent-gold);">Nathan Musonda</strong> (GitHub: <strong style="color: var(--accent-gold);">Shock-father</strong>), known professionally as <strong style="color: var(--accent-gold);">"Professor Nate"</strong>. I'm a Zambian Computer Science student and software developer with a passion for creating practical technology solutions that make a difference.</p>
+                    
+                    <div class="about-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        I believe in building technology that solves real problems for real people, especially in the Zambian context.
+                    </div>
+                    
+                    <h3><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> Educational Journey</h3>
+                    <p>My educational journey began at North Park Private School, followed by boarding school at Moomba Secondary School where I developed discipline and leadership skills. I hold professional certifications including a Klagg Certificate and Huawei Certification in networking and telecommunications.</p>
+                    
+                    <h3><i class="fas fa-chalkboard-teacher" style="margin-right: 10px;"></i> Professor Nate International</h3>
+                    <p>Through my education initiative, I focus on bridging the gap between academic knowledge and practical software development. I mentor aspiring developers and create resources that help others build real-world programming skills. My goal is to empower the next generation of Zambian tech talent.</p>
+                    
+                    <h3><i class="fas fa-laptop-code" style="margin-right: 10px;"></i> Current Focus</h3>
+                    <p>I'm currently pursuing my Bachelor's in Computer Science while working on full-stack projects, mobile applications, and AI integrations. I'm particularly interested in creating solutions for education, logistics, and business needs in Zambia.</p>
+                    
+                    <h3><i class="fas fa-cogs" style="margin-right: 10px;"></i> Technology Stack</h3>
+                    <p>Python is my primary language, complemented by Flask/Django for web development, Flutter for mobile apps, MySQL/PostgreSQL for databases, and TensorFlow for AI/ML implementations. I'm always exploring new technologies to expand my toolkit.</p>
+                    
+                    <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="CV.html" class="btn btn-gold">View Resume</a>
+                        <a href="contact.html" class="btn btn-outline">Start a Project</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,7 +175,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
-                    <p>Computer Science Student & Software Developer specializing in Full-Stack Web Development, Mobile Applications, Python Programming, and Tech Education.</p>
+                    <p>Computer Science Student & Software Developer</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -174,6 +183,10 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="expertise.html">Expertise</a></li>
                         <li><a href="github.html">GitHub</a></li>
+                        <li><a href="linkedin.html">LinkedIn</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="CV.html">My CV</a></li>
+                        <li><a href="about.html">About Me</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -188,7 +201,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Nathan Musonda (Professor Nate International). All rights reserved.</p>
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
             </div>
         </div>
     </footer>
