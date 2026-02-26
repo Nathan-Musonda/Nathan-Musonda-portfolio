@@ -16,8 +16,10 @@
         }
         
         .expertise-card {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.7) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 16px;
             padding: 35px 25px;
             text-align: center;
@@ -28,6 +30,7 @@
             border-color: var(--accent-gold);
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background-color: rgba(21, 30, 44, 0.9) !important;
         }
         
         .expertise-icon {
@@ -45,10 +48,6 @@
         .expertise-card p {
             color: var(--muted-white);
             line-height: 1.7;
-        }
-        
-        .page-header {
-            background: linear-gradient(135deg, var(--pure-black), var(--midnight-blue));
         }
     </style>
 </head>
@@ -100,65 +99,4 @@
         
         <div class="expertise-card">
             <div class="expertise-icon"><i class="fas fa-mobile-alt"></i></div>
-            <h3>Mobile Application Development</h3>
-            <p>Developing cross-platform mobile applications with Flutter and native Android solutions. Focus on user-friendly interfaces and seamless functionality.</p>
-        </div>
-        
-        <div class="expertise-card">
-            <div class="expertise-icon"><i class="fas fa-brain"></i></div>
-            <h3>AI/ML Integration</h3>
-            <p>Implementing practical machine learning solutions with TensorFlow Lite and scikit-learn. Specializing in applied AI for real-world business problems.</p>
-        </div>
-        
-        <div class="expertise-card">
-            <div class="expertise-icon"><i class="fas fa-database"></i></div>
-            <h3>Database Design & Administration</h3>
-            <p>Designing, implementing, and optimizing MySQL and PostgreSQL databases. Ensuring data integrity, security, and efficient access for applications.</p>
-        </div>
-        
-        <div class="expertise-card">
-            <div class="expertise-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-            <h3>Tech Education & Mentoring</h3>
-            <p>Sharing knowledge through Professor Nate International. Teaching programming concepts, project development, and career guidance for aspiring developers.</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
-                    <p>Computer Science Student & Software Developer</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="expertise.html">Expertise</a></li>
-                        <li><a href="github.html">GitHub</a></li>
-                        <li><a href="linkedin.html">LinkedIn</a></li>
-                        <li><a href="education.html">Education</a></li>
-                        <li><a href="CV.html">My CV</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Connect With Me</h4>
-                    <div class="social-icons">
-                        <a href="https://github.com/Shock-father" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/260972021106" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+            <h3>Mobile Application Development</h3
