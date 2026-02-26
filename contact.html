@@ -10,7 +10,6 @@
     <style>
         .contact-page { 
             padding: 60px 0;
-            background-color: var(--midnight-blue);
         }
         
         .contact-grid {
@@ -23,10 +22,13 @@
         
         .contact-info-card,
         .contact-form-card {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.75) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 16px;
             padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
         .contact-info-card h2,
@@ -34,6 +36,36 @@
             font-size: 1.8rem;
             color: var(--accent-gold);
             margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* Profile Image Section */
+        .contact-profile {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .contact-profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-gold);
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .contact-profile h3 {
+            color: var(--soft-white);
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+        
+        .contact-profile p {
+            color: var(--accent-gold);
+            font-size: 0.95rem;
         }
         
         .contact-detail-item {
@@ -41,21 +73,38 @@
             align-items: flex-start;
             gap: 15px;
             margin-bottom: 25px;
+            padding: 5px 0;
+            transition: all 0.3s;
+        }
+        
+        .contact-detail-item:hover {
+            transform: translateX(5px);
         }
         
         .contact-detail-item i {
             font-size: 1.5rem;
             color: var(--accent-gold);
             width: 30px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .contact-detail-item h4 { 
             color: var(--soft-white); 
             margin-bottom: 5px; 
+            font-size: 1rem;
         }
         
-        .contact-detail-item p { 
+        .contact-detail-item p, 
+        .contact-detail-item a { 
             color: var(--muted-white); 
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            word-break: break-word;
+        }
+        
+        .contact-detail-item a:hover {
+            color: var(--accent-gold);
         }
         
         .form-group { 
@@ -67,12 +116,14 @@
         .form-group textarea {
             width: 100%;
             padding: 15px;
-            background-color: var(--midnight-blue);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 8px;
             color: var(--soft-white);
             font-size: 1rem;
             transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         
         .form-group input:focus,
@@ -80,6 +131,12 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-gold);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .form-group select option {
+            background-color: var(--midnight-light);
+            color: var(--soft-white);
         }
         
         .form-group textarea { 
@@ -88,7 +145,7 @@
         }
         
         .submit-btn {
-            background-color: var(--accent-gold);
+            background-color: rgba(255, 215, 0, 0.85);
             color: var(--pure-black);
             border: none;
             padding: 15px 30px;
@@ -98,10 +155,12 @@
             cursor: pointer;
             transition: all 0.3s;
             width: 100%;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         
         .submit-btn:hover {
-            background-color: #e6b800;
+            background-color: rgba(255, 215, 0, 0.95);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
@@ -111,17 +170,19 @@
             border-radius: 4px;
             margin-bottom: 15px;
             display: none;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         
         .form-message.success {
-            background-color: var(--midnight-light);
+            background-color: rgba(21, 30, 44, 0.7);
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
             display: block;
         }
         
         .form-message.error {
-            background-color: var(--midnight-light);
+            background-color: rgba(21, 30, 44, 0.7);
             border: 1px solid #ff4444;
             color: #ff4444;
             display: block;
@@ -138,17 +199,45 @@
         .contact-note {
             margin-top: 30px;
             padding: 20px;
-            background-color: var(--midnight-blue);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 8px;
             color: var(--muted-white);
             font-style: italic;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            line-height: 1.6;
+        }
+        
+        .contact-note i {
+            color: var(--accent-gold);
         }
         
         @media (max-width: 768px) {
             .contact-grid { 
                 grid-template-columns: 1fr; 
                 gap: 30px;
+            }
+            
+            .contact-info-card,
+            .contact-form-card {
+                padding: 30px;
+            }
+            
+            .contact-detail-item {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-detail-item {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+            
+            .contact-detail-item i {
+                margin: 0 auto;
             }
         }
     </style>
@@ -190,6 +279,13 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info-card">
+                    <!-- Profile Image Section -->
+                    <div class="contact-profile">
+                        <img src="images/1223.jpg" alt="Nathan Musonda - Professor Nate">
+                        <h3>Nathan Musonda</h3>
+                        <p>@Professor Nate</p>
+                    </div>
+                    
                     <h2>Contact Information</h2>
                     
                     <div class="contact-detail-item">
@@ -249,8 +345,7 @@
                     </div>
                     
                     <div class="contact-note">
-                        <i class="fas fa-clock" style="color: var(--accent-gold); margin-right: 8px;"></i>
-                        I typically respond within 24 hours. Let's build something amazing together!
+                        <i class="fas fa-clock"></i> I typically respond within 24 hours. Let's build something amazing together!
                     </div>
                 </div>
                 
@@ -276,13 +371,13 @@
                             <select name="service" required>
                                 <option value="" disabled selected>Select Service Needed</option>
                                 <option value="Computer Diagnosis">Computer Diagnosis</option>
-                                <option value="Software-Installation">Software Installation</option>
-                                <option value="Windows-update">Windows Update</option>
+                                <option value="Software Installation">Software Installation</option>
+                                <option value="Windows Update">Windows Update</option>
                                 <option value="Hardware Repair">Hardware Repair</option>
                                 <option value="Malware Removal">Malware Removal</option>
                                 <option value="Hardware Replacement">Hardware Replacement</option>
-                                <option value="education">Tech Education</option>
-                                <option value="collaboration">Project Collaboration</option>
+                                <option value="Tech Education">Tech Education</option>
+                                <option value="Project Collaboration">Project Collaboration</option>
                             </select>
                         </div>
                         
