@@ -3,81 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Musonda | Professional Resume</title>
+    <title>Nathan Musonda | Professional CV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .resume-page {
-            background-color: #e2e8f0;
+        .cv-page {
+            background-color: var(--pure-black);
             padding: 60px 0;
             min-height: calc(100vh - 70px);
         }
         
-        .resume-card {
+        .cv-card {
             max-width: 1000px;
             margin: 0 auto;
-            background-color: #ffffff;
+            background-color: var(--midnight-blue);
+            border: 1px solid var(--medium-gray);
             border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
             overflow: hidden;
-            color: #0f172a;
         }
         
-        .resume-header {
-            background: linear-gradient(145deg, #0b2b3d, #1a4b5f);
-            color: white;
+        .cv-header {
+            background: linear-gradient(135deg, var(--pure-black), var(--midnight-light));
+            color: var(--soft-white);
             padding: 40px;
+            border-bottom: 1px solid var(--medium-gray);
         }
         
-        .resume-header h1 {
+        .cv-header h1 {
             font-size: 3rem;
-            color: white;
+            color: var(--soft-white);
             margin-bottom: 10px;
         }
         
-        .resume-contact {
+        .cv-header h1 span {
+            color: var(--accent-gold);
+        }
+        
+        .cv-contact {
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
             margin-top: 25px;
             padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.2);
+            border-top: 1px solid var(--medium-gray);
         }
         
-        .resume-contact-item {
+        .cv-contact-item {
             display: flex;
             align-items: center;
             gap: 10px;
+            color: var(--muted-white);
         }
         
-        .resume-contact-item i { color: #b3e5fc; width: 20px; }
-        .resume-contact-item a { color: white; text-decoration: none; }
+        .cv-contact-item i {
+            color: var(--accent-gold);
+            width: 20px;
+        }
         
-        .resume-main {
+        .cv-contact-item a {
+            color: var(--muted-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .cv-contact-item a:hover {
+            color: var(--accent-gold);
+        }
+        
+        .cv-main {
             display: grid;
             grid-template-columns: 1fr 2fr;
         }
         
-        .resume-left {
-            background-color: #f8fafc;
+        .cv-left {
+            background-color: var(--midnight-light);
             padding: 30px;
-            border-right: 1px solid #dde7f0;
+            border-right: 1px solid var(--medium-gray);
         }
         
-        .resume-right {
-            background-color: white;
+        .cv-right {
+            background-color: var(--midnight-blue);
             padding: 30px;
         }
         
-        .resume-section {
+        .cv-section {
             margin-bottom: 30px;
         }
         
-        .resume-section h2 {
+        .cv-section h2 {
             font-size: 1.3rem;
-            color: #0e4b62;
-            border-bottom: 3px solid #cbd5e1;
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--medium-gray);
             padding-bottom: 10px;
             margin-bottom: 20px;
             display: flex;
@@ -85,64 +103,112 @@
             gap: 10px;
         }
         
-        .resume-section h2 i { color: #1e6f8f; }
+        .cv-section h2 i {
+            color: var(--accent-gold);
+        }
         
-        .resume-skills {
+        .cv-skills {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin: 10px 0;
         }
         
-        .resume-skill {
-            background-color: white;
-            border: 1px solid #b9d5e3;
+        .cv-skill {
+            background-color: var(--midnight-blue);
+            border: 1px solid var(--medium-gray);
             padding: 5px 15px;
             border-radius: 30px;
             font-size: 0.85rem;
-            color: #12455c;
+            color: var(--muted-white);
+            transition: all 0.3s;
         }
         
-        .resume-skill-cat {
+        .cv-skill:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+        
+        .cv-skill-cat {
             font-weight: 600;
-            color: #1f4e6f;
+            color: var(--soft-white);
             margin: 15px 0 8px;
         }
         
-        .resume-item {
+        .cv-item {
             margin-bottom: 20px;
         }
         
-        .resume-item h3 {
+        .cv-item h3 {
             font-size: 1.1rem;
-            color: #1f5875;
+            color: var(--soft-white);
             margin-bottom: 5px;
         }
         
-        .resume-item .meta { color: #335b6e; font-weight: 500; }
-        .resume-item ul { margin-top: 10px; padding-left: 20px; color: #1e293b; }
+        .cv-item .meta {
+            color: var(--accent-gold);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
         
-        .resume-summary {
-            background-color: #f0f7fc;
+        .cv-item .date {
+            color: var(--muted-white);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+        
+        .cv-item ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: var(--muted-white);
+        }
+        
+        .cv-item li {
+            margin-bottom: 5px;
+        }
+        
+        .cv-summary {
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             padding: 20px;
             border-radius: 12px;
             margin-bottom: 30px;
-            border-left: 6px solid #2c7da0;
+            color: var(--muted-white);
+            line-height: 1.7;
         }
         
-        .resume-objective {
-            background-color: #f8fafc;
+        .cv-objective {
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             padding: 20px;
             border-radius: 12px;
-            border: 1px dashed #9bb8cf;
             margin-top: 30px;
+            color: var(--muted-white);
+            font-style: italic;
+        }
+        
+        .cv-objective strong {
+            color: var(--accent-gold);
         }
         
         @media (max-width: 768px) {
-            .resume-main { grid-template-columns: 1fr; }
-            .resume-left { border-right: 0; border-bottom: 1px solid #dde7f0; }
-            .resume-header h1 { font-size: 2rem; }
-            .resume-contact { flex-direction: column; gap: 15px; }
+            .cv-main {
+                grid-template-columns: 1fr;
+            }
+            
+            .cv-left {
+                border-right: 0;
+                border-bottom: 1px solid var(--medium-gray);
+            }
+            
+            .cv-header h1 {
+                font-size: 2rem;
+            }
+            
+            .cv-contact {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
@@ -172,90 +238,170 @@
         </div>
     </header>
 
-    <div class="resume-page">
+    <div class="cv-page">
         <div class="container">
-            <div class="resume-card">
-                <div class="resume-header">
-                    <h1>NATHAN MUSONDA</h1>
-                    <div class="resume-contact">
-                        <div class="resume-contact-item"><i class="fas fa-map-marker-alt"></i> Lusaka, Zambia</div>
-                        <div class="resume-contact-item"><i class="fas fa-phone-alt"></i> +260 972 021106</div>
-                        <div class="resume-contact-item"><i class="fas fa-envelope"></i> nathanmusonda85@gmail.com</div>
-                        <div class="resume-contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/nathan-musonda</div>
-                        <div class="resume-contact-item"><i class="fab fa-github"></i> github.com/Shock-father</div>
+            <div class="cv-card">
+                <div class="cv-header">
+                    <h1>NATHAN <span>MUSONDA</span></h1>
+                    <div class="cv-contact">
+                        <div class="cv-contact-item"><i class="fas fa-map-marker-alt"></i> Lusaka, Zambia</div>
+                        <div class="cv-contact-item"><i class="fas fa-phone-alt"></i> +260 972 021106</div>
+                        <div class="cv-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:nathanmusonda85@gmail.com">nathanmusonda85@gmail.com</a></div>
+                        <div class="cv-contact-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank">linkedin.com/in/nathan-musonda</a></div>
+                        <div class="cv-contact-item"><i class="fab fa-github"></i> <a href="https://github.com/Shock-father" target="_blank">github.com/Shock-father</a></div>
                     </div>
                 </div>
                 
-                <div class="resume-main">
-                    <div class="resume-left">
-                        <div class="resume-section">
+                <div class="cv-main">
+                    <div class="cv-left">
+                        <div class="cv-section">
                             <h2><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
-                            <div class="resume-item">
-                                <h3>BSc in Computer Science</h3>
+                            <div class="cv-item">
+                                <h3>Bachelor of Science in Computer Science</h3>
                                 <div class="meta">Mulungushi University</div>
-                                <div>Expected Graduation: 2026</div>
+                                <div class="date">Expected Graduation: 2026</div>
+                            </div>
+                            <div class="cv-item">
+                                <h3>Huawei Certification</h3>
+                                <div class="meta">Huawei ICT Academy</div>
+                                <div class="date">Completed 2021</div>
+                            </div>
+                            <div class="cv-item">
+                                <h3>Klagg Certificate</h3>
+                                <div class="meta">Technical Certification</div>
+                                <div class="date">Completed 2019</div>
                             </div>
                         </div>
                         
-                        <div class="resume-section">
-                            <h2><i class="fas fa-code"></i> TECHNICAL SKILLS</h2>
-                            <div class="resume-skill-cat">Languages</div>
-                            <div class="resume-skills">
-                                <span class="resume-skill">Python</span>
-                                <span class="resume-skill">Java</span>
-                                <span class="resume-skill">SQL</span>
-                                <span class="resume-skill">HTML/CSS</span>
+                        <div class="cv-section">
+                            <h2><i class="fas fa-code"></i> SKILLS</h2>
+                            <div class="cv-skill-cat">Programming Languages</div>
+                            <div class="cv-skills">
+                                <span class="cv-skill">Python</span>
+                                <span class="cv-skill">Java</span>
+                                <span class="cv-skill">SQL</span>
+                                <span class="cv-skill">HTML</span>
+                                <span class="cv-skill">CSS</span>
                             </div>
-                            <div class="resume-skill-cat">Frameworks</div>
-                            <div class="resume-skills">
-                                <span class="resume-skill">Flask</span>
-                                <span class="resume-skill">MySQL</span>
-                                <span class="resume-skill">TensorFlow Lite</span>
-                                <span class="resume-skill">Flutter</span>
-                                <span class="resume-skill">Git</span>
+                            
+                            <div class="cv-skill-cat">Frameworks & Tools</div>
+                            <div class="cv-skills">
+                                <span class="cv-skill">Flask</span>
+                                <span class="cv-skill">MySQL</span>
+                                <span class="cv-skill">REST APIs</span>
+                                <span class="cv-skill">TensorFlow Lite</span>
+                                <span class="cv-skill">Flutter</span>
+                                <span class="cv-skill">Git</span>
+                            </div>
+                            
+                            <div class="cv-skill-cat">Core Competencies</div>
+                            <div class="cv-skills">
+                                <span class="cv-skill">Software Development</span>
+                                <span class="cv-skill">ML Integration</span>
+                                <span class="cv-skill">Mobile App Dev</span>
+                                <span class="cv-skill">Database Systems</span>
+                                <span class="cv-skill">System Design</span>
                             </div>
                         </div>
                         
-                        <div class="resume-section">
+                        <div class="cv-section">
                             <h2><i class="fas fa-certificate"></i> CERTIFICATIONS</h2>
-                            <div>🔹 Huawei Certification</div>
-                            <div>🔹 Kaggle Certification</div>
+                            <div class="cv-item">
+                                <div>• Huawei Certification</div>
+                                <div>• Kaggle Certification</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cv-section">
+                            <h2><i class="fas fa-language"></i> LANGUAGES</h2>
+                            <div class="cv-item">
+                                <div>English (Fluent)</div>
+                                <div>Bemba (Native)</div>
+                                <div>Nyanja (Fluent)</div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="resume-right">
-                        <div class="resume-summary">
-                            Computer Science student with experience in software development, AI applications, and operational roles. Skilled in full-stack systems, mobile AI tools, and data-driven platforms.
+                    <div class="cv-right">
+                        <div class="cv-summary">
+                            <i class="fas fa-bullseye" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                            Computer Science student with hands-on experience in software development, AI-powered applications, and operational roles across logistics, construction, and technical environments. Proven ability to build full-stack systems, mobile AI tools, and data-driven platforms.
                         </div>
                         
-                        <div class="resume-section">
+                        <div class="cv-section">
                             <h2><i class="fas fa-briefcase"></i> EXPERIENCE</h2>
-                            <div class="resume-item">
+                            
+                            <div class="cv-item">
                                 <h3>Computer Science Intern</h3>
                                 <div class="meta">Mulungushi University</div>
-                                <ul><li>Software development and system-related projects</li></ul>
+                                <div class="date">2024 - Present</div>
+                                <ul>
+                                    <li>Contributed to software development tasks and system-related technical projects.</li>
+                                    <li>Applied academic concepts to solve real-world computing challenges.</li>
+                                </ul>
                             </div>
-                            <div class="resume-item">
+                            
+                            <div class="cv-item">
                                 <h3>Assistant Director</h3>
                                 <div class="meta">AMBA Logistics Zambia LTD</div>
-                                <ul><li>Operational planning and logistics coordination</li></ul>
+                                <div class="date">2022 - 2024</div>
+                                <ul>
+                                    <li>Supported operational planning and logistics coordination.</li>
+                                    <li>Supervised workflow processes and contributed to management decisions.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="cv-item">
+                                <h3>Construction Site Supervisor</h3>
+                                <div class="meta">Private School Project</div>
+                                <div class="date">2021 - 2022</div>
+                                <ul>
+                                    <li>Oversaw daily site operations and ensured timely project execution.</li>
+                                    <li>Coordinated teams of workers and maintained progress records.</li>
+                                </ul>
                             </div>
                         </div>
                         
-                        <div class="resume-section">
+                        <div class="cv-section">
                             <h2><i class="fas fa-folder-open"></i> PROJECTS</h2>
-                            <div class="resume-item">
+                            
+                            <div class="cv-item">
                                 <h3>EduGemma – Offline AI Learning Assistant</h3>
-                                <ul><li>AI learning tool for low-connectivity environments</li></ul>
+                                <ul>
+                                    <li>Developed AI-powered learning tool for low-connectivity environments.</li>
+                                    <li>Integrated voice input and read-aloud response features.</li>
+                                    <li>Implemented quiz functionality with local score storage.</li>
+                                </ul>
                             </div>
-                            <div class="resume-item">
+                            
+                            <div class="cv-item">
+                                <h3>Climate Data Visualization Portal</h3>
+                                <ul>
+                                    <li>Built web platform to analyze and visualize environmental datasets.</li>
+                                    <li>Focused on improving data accuracy and user accessibility.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="cv-item">
                                 <h3>Car Parts Management System</h3>
-                                <ul><li>Full-stack inventory system with Flask and MySQL</li></ul>
+                                <ul>
+                                    <li>Full-stack inventory system using Flask and MySQL.</li>
+                                    <li>Enabled tracking of inventory, orders, and sales.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="cv-item">
+                                <h3>EduTrack – Online Pupil Record System</h3>
+                                <ul>
+                                    <li>Role-based school management system for attendance and fees.</li>
+                                    <li>Enhanced data accessibility for administrators and teachers.</li>
+                                </ul>
                             </div>
                         </div>
                         
-                        <div class="resume-objective">
-                            <strong>Objective:</strong> Aspiring to grow into leadership roles in AI, Networking, and Software Engineering.
+                        <div class="cv-objective">
+                            <i class="fas fa-rocket" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                            <strong>CAREER OBJECTIVE:</strong> Aspiring to grow into leadership roles within Artificial Intelligence, Networking, and Software Engineering by combining technical expertise with strong management capabilities to build impactful, real-world technology solutions.
                         </div>
                     </div>
                 </div>
@@ -267,15 +413,34 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">Nathan Musonda</div>
+                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
+                    <p>Computer Science Student & Software Developer</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                        <li><a href="linkedin.html">LinkedIn</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="CV.html">My CV</a></li>
+                        <li><a href="about.html">About Me</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Shock-father" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/260972021106" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
             </div>
         </div>
     </footer>
