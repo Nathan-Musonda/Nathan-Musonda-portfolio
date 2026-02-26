@@ -8,56 +8,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .education-timeline { max-width: 900px; margin: 40px auto; }
+        .education-page { 
+            padding: 60px 0;
+            background-color: var(--midnight-blue);
+        }
+        
+        .education-timeline { 
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
         
         .education-item {
-            background-color: var(--dark-blue-light);
+            background-color: var(--midnight-light);
+            border: 1px solid var(--medium-gray);
             border-radius: 16px;
             padding: 30px;
             margin-bottom: 25px;
             display: flex;
             gap: 25px;
             transition: all 0.3s;
-            border-left: 6px solid var(--primary);
         }
         
-        .education-item:nth-child(2) { border-left-color: var(--secondary); }
-        .education-item:nth-child(3) { border-left-color: var(--accent); }
-        .education-item:nth-child(4) { border-left-color: #0066B3; }
-        .education-item:nth-child(5) { border-left-color: #238636; }
-        .education-item:nth-child(6) { border-left-color: var(--linkedin-blue); }
-        
-        .education-item:hover { transform: translateX(10px); }
+        .education-item:hover {
+            border-color: var(--accent-gold);
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
         
         .education-icon {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--accent-gold);
             min-width: 60px;
         }
-        
-        .education-item:nth-child(2) .education-icon { color: var(--secondary); }
-        .education-item:nth-child(3) .education-icon { color: var(--accent); }
-        .education-item:nth-child(4) .education-icon { color: #0066B3; }
-        .education-item:nth-child(5) .education-icon { color: #238636; }
-        .education-item:nth-child(6) .education-icon { color: var(--linkedin-blue); }
         
         .education-content h3 {
             font-size: 1.4rem;
             margin-bottom: 8px;
-            color: white;
+            color: var(--soft-white);
         }
         
         .education-institution,
         .education-date {
-            color: var(--text-muted);
+            color: var(--muted-white);
             margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
         
+        .education-description {
+            color: var(--muted-white);
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+        
+        .education-details {
+            background-color: var(--midnight-blue);
+            border: 1px solid var(--medium-gray);
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 15px;
+            color: var(--muted-white);
+            font-size: 0.9rem;
+        }
+        
+        .education-details strong {
+            color: var(--accent-gold);
+        }
+        
         @media (max-width: 768px) {
-            .education-item { flex-direction: column; gap: 15px; }
+            .education-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .education-icon {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -94,64 +120,86 @@
         </div>
     </div>
 
-    <div class="education-timeline container">
-        <div class="education-item">
-            <div class="education-icon"><i class="fas fa-school"></i></div>
-            <div class="education-content">
-                <h3>Primary Education</h3>
-                <div class="education-institution"><i class="fas fa-building"></i> North Park Private School</div>
-                <div class="education-date"><i class="far fa-calendar"></i> 2007 - 2014</div>
-                <p>Completed primary education with excellent academic performance. Top 10% in national examinations.</p>
-            </div>
-        </div>
-        
-        <div class="education-item">
-            <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
-            <div class="education-content">
-                <h3>Secondary Education</h3>
-                <div class="education-institution"><i class="fas fa-university"></i> Moomba Secondary School (Boarding)</div>
-                <div class="education-date"><i class="far fa-calendar"></i> 2015 - 2018</div>
-                <p>O-Levels with focus on sciences and mathematics. Subjects: Mathematics, Science, Computer Studies.</p>
-            </div>
-        </div>
-        
-        <div class="education-item">
-            <div class="education-icon"><i class="fas fa-certificate"></i></div>
-            <div class="education-content">
-                <h3>Klagg Certificate</h3>
-                <div class="education-institution"><i class="fas fa-award"></i> Technical Certification</div>
-                <div class="education-date"><i class="far fa-calendar"></i> Completed 2019</div>
-                <p>Professional certification in IT domains. Practical applications and industry standards.</p>
-            </div>
-        </div>
-        
-        <div class="education-item">
-            <div class="education-icon"><i class="fas fa-network-wired"></i></div>
-            <div class="education-content">
-                <h3>Huawei Certification</h3>
-                <div class="education-institution"><i class="fas fa-server"></i> Huawei ICT Academy</div>
-                <div class="education-date"><i class="far fa-calendar"></i> Completed 2021</div>
-                <p>Networking and telecommunications technologies. ICT Infrastructure.</p>
-            </div>
-        </div>
-        
-        <div class="education-item">
-            <div class="education-icon"><i class="fas fa-university"></i></div>
-            <div class="education-content">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <div class="education-institution"><i class="fas fa-building"></i> Mulungushi University</div>
-                <div class="education-date"><i class="far fa-calendar"></i> Expected Graduation: 2026</div>
-                <p>Algorithms, data structures, software engineering, database systems, AI fundamentals.</p>
-            </div>
-        </div>
-        
-        <div class="education-item">
-            <div class="education-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-            <div class="education-content">
-                <h3>Professor Nate International</h3>
-                <div class="education-institution"><i class="fas fa-users"></i> Tech Education Initiative</div>
-                <div class="education-date"><i class="far fa-calendar"></i> Founded: 2023</div>
-                <p>Mentoring developers. Focus: Python, Web Development, Mobile Apps, Career Guidance.</p>
+    <div class="education-page">
+        <div class="container">
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-icon"><i class="fas fa-school"></i></div>
+                    <div class="education-content">
+                        <h3>Primary Education</h3>
+                        <div class="education-institution"><i class="fas fa-building"></i> North Park Private School</div>
+                        <div class="education-date"><i class="far fa-calendar"></i> 2007 - 2014</div>
+                        <p class="education-description">Completed primary education with excellent academic performance. Developed foundational skills in mathematics, science, and languages.</p>
+                        <div class="education-details">
+                            <strong>Achievements:</strong> Top 10% in national examinations, Active in sports and cultural activities
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="education-content">
+                        <h3>Secondary Education</h3>
+                        <div class="education-institution"><i class="fas fa-university"></i> Moomba Secondary School (Boarding)</div>
+                        <div class="education-date"><i class="far fa-calendar"></i> 2015 - 2018</div>
+                        <p class="education-description">Completed O-Levels with focus on sciences and mathematics. Boarding school experience developed independence and leadership skills.</p>
+                        <div class="education-details">
+                            <strong>Subjects:</strong> Mathematics, Science, English, Computer Studies, Biology, Chemistry
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="education-content">
+                        <h3>Klagg Certificate</h3>
+                        <div class="education-institution"><i class="fas fa-award"></i> Technical Certification</div>
+                        <div class="education-date"><i class="far fa-calendar"></i> Completed 2019</div>
+                        <p class="education-description">Professional certification demonstrating technical proficiency in specific IT domains. Enhanced practical skills in technology applications.</p>
+                        <div class="education-details">
+                            <strong>Focus Areas:</strong> Technical skills, Practical applications, Industry standards
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="education-content">
+                        <h3>Huawei Certification</h3>
+                        <div class="education-institution"><i class="fas fa-server"></i> Huawei ICT Academy</div>
+                        <div class="education-date"><i class="far fa-calendar"></i> Completed 2021</div>
+                        <p class="education-description">Professional certification in networking and telecommunications technologies from Huawei, a global leader in ICT solutions.</p>
+                        <div class="education-details">
+                            <strong>Technologies:</strong> Networking, Telecommunications, ICT Infrastructure
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon"><i class="fas fa-university"></i></div>
+                    <div class="education-content">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <div class="education-institution"><i class="fas fa-building"></i> Mulungushi University</div>
+                        <div class="education-date"><i class="far fa-calendar"></i> Expected Graduation: 2026</div>
+                        <p class="education-description">Comprehensive computer science education covering algorithms, data structures, software engineering, database systems, and artificial intelligence fundamentals.</p>
+                        <div class="education-details">
+                            <strong>Key Focus Areas:</strong> Software Development, Database Design, Web Technologies, Mobile Computing
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="education-content">
+                        <h3>Professor Nate International</h3>
+                        <div class="education-institution"><i class="fas fa-users"></i> Tech Education Initiative</div>
+                        <div class="education-date"><i class="far fa-calendar"></i> Founded: 2023</div>
+                        <p class="education-description">Personal initiative focused on technology education, mentoring aspiring developers, and creating practical learning resources for programming and software development.</p>
+                        <div class="education-details">
+                            <strong>Focus:</strong> Python Programming, Web Development, Mobile Apps, Career Guidance
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -160,15 +208,34 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">Nathan Musonda</div>
+                    <div class="footer-logo">Nathan Musonda <span>(Professor Nate)</span></div>
+                    <p>Computer Science Student & Software Developer</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                        <li><a href="linkedin.html">LinkedIn</a></li>
+                        <li><a href="education.html">Education</a></li>
                         <li><a href="CV.html">My CV</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Shock-father" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-musonda-382b82181/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@nathannatemusonda" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/260972021106" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nathan Musonda. All rights reserved.</p>
             </div>
         </div>
     </footer>
