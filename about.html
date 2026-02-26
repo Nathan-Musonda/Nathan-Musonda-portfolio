@@ -10,7 +10,6 @@
     <style>
         .about-page { 
             padding: 60px 0;
-            background-color: var(--midnight-blue);
         }
         
         .about-content {
@@ -29,14 +28,14 @@
             width: 100%;
             max-width: 450px;
             border-radius: 20px;
-            border: 4px solid var(--medium-gray);
+            border: 4px solid var(--accent-gold);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             transition: all 0.3s;
         }
         
         .about-image img:hover {
-            border-color: var(--accent-gold);
             transform: scale(1.02);
+            border-color: var(--soft-white);
         }
         
         .zambian-connection {
@@ -44,13 +43,14 @@
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: var(--pure-black);
+            background-color: rgba(0, 0, 0, 0.8);
             color: var(--accent-gold);
             padding: 8px 25px;
             border-radius: 50px;
             font-weight: 600;
             white-space: nowrap;
             border: 2px solid var(--accent-gold);
+            backdrop-filter: blur(5px);
         }
         
         .about-text h3 {
@@ -68,8 +68,10 @@
         }
         
         .about-highlight {
-            background-color: var(--midnight-light);
-            border: 1px solid var(--medium-gray);
+            background-color: rgba(21, 30, 44, 0.7) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             padding: 20px;
             border-radius: 12px;
             margin: 25px 0;
@@ -138,7 +140,7 @@
                     <div class="zambian-connection">
                         <i class="fas fa-globe-africa"></i> Professor Nate International
                     </div>
-                    <img src="images/1223.jpeg" alt="Nathan Musonda - Professor Nate">
+                    <img src="images/1223.jpg" alt="Nathan Musonda - Professor Nate">
                 </div>
                 
                 <div class="about-text">
@@ -162,7 +164,7 @@
                     <p>Python is my primary language, complemented by Flask/Django for web development, Flutter for mobile apps, MySQL/PostgreSQL for databases, and TensorFlow for AI/ML implementations. I'm always exploring new technologies to expand my toolkit.</p>
                     
                     <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
-                        <a href="CV.html" class="btn btn-gold">view My CV</a>
+                        <a href="CV.html" class="btn btn-gold">View Resume</a>
                         <a href="contact.html" class="btn btn-outline">Start a Project</a>
                     </div>
                 </div>
