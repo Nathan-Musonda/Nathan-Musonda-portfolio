@@ -1,14 +1,44 @@
-/* Add these to your existing styles.css */
+/* ===== TRANSPARENT BACKGROUND WITH CUSTOM IMAGE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-/* ===== TRANSPARENT BACKGROUND WITH IMAGE ===== */
+:root {
+    /* Your favorite colors */
+    --midnight-blue: #0B0F1A;
+    --midnight-light: #151E2C;
+    --midnight-accent: #1E2A3A;
+    --pure-black: #000000;
+    --dark-gray: #1E1E1E;
+    --medium-gray: #2D2D2D;
+    --light-gray: #3A3A3A;
+    --soft-white: #F5F5F5;
+    --muted-white: #CCCCCC;
+    --accent-gold: #FFD700;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+/* ===== BACKGROUND IMAGE ===== */
 body {
-    background-image: url('../images/1223.jpg');
+    background-image: url('../images/background.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
     min-height: 100vh;
+    line-height: 1.6;
+    color: var(--soft-white);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Dark overlay for readability */
@@ -19,138 +49,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Dark overlay - adjust opacity as needed */
+    background-color: rgba(0, 0, 0, 0.8); /* 80% dark overlay */
     z-index: -1;
-}
-
-/* Make content sections slightly transparent */
-header, 
-section, 
-footer,
-.card,
-.expertise-card,
-.github-profile-header,
-.github-stat-card,
-.github-project-card,
-.linkedin-profile-header,
-.linkedin-cert-card,
-.linkedin-activity,
-.education-item,
-.contact-info-card,
-.contact-form-card,
-.cv-card,
-.cv-left,
-.cv-right,
-.cv-header {
-    background-color: rgba(21, 30, 44, 0.85) !important; /* midnight-light with transparency */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-/* Make header more solid for navigation */
-header {
-    background-color: rgba(0, 0, 0, 0.9) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-/* Make footer more solid */
-footer {
-    background-color: rgba(0, 0, 0, 0.9) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-/* Page header with transparency */
-.page-header {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(11, 15, 26, 0.8));
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-/* Social links bar with transparency */
-.social-links-bar {
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-/* Hero section with transparency */
-.hero {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(11, 15, 26, 0.7)) !important;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-}
-
-/* Buttons with slight transparency */
-.btn {
-    background-color: rgba(21, 30, 44, 0.9);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-}
-
-.btn-gold {
-    background-color: rgba(255, 215, 0, 0.9);
-}
-
-/* Cards with transparency */
-.preview-card,
-.service-card,
-.expertise-card,
-.github-project-card {
-    background-color: rgba(21, 30, 44, 0.8) !important;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-/* Ensure text remains readable */
-h1, h2, h3, h4, h5, h6, p, span, a {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* ===== UNIFIED COLOR SCHEME ===== */
-:root {
-    /* Your favorite colors */
-    --midnight-blue: #0B0F1A;      /* Dark midnight blue - main background */
-    --midnight-light: #151E2C;      /* Slightly lighter midnight blue - cards/sections */
-    --midnight-accent: #1E2A3A;     /* Medium midnight blue - hover states */
-    --pure-black: #000000;           /* Black - headers/footers */
-    --dark-gray: #1E1E1E;            /* Dark gray - alternate sections */
-    --medium-gray: #2D2D2D;           /* Medium gray - borders */
-    --light-gray: #3A3A3A;            /* Light gray - cards */
-    --soft-white: #F5F5F5;            /* Soft white - primary text */
-    --muted-white: #CCCCCC;            /* Muted white - secondary text */
-    --accent-gold: #FFD700;            /* Keeping gold as accent for highlights */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 14px;
-}
-
-body {
-    line-height: 1.6;
-    color: var(--soft-white);
-    background-color: var(--midnight-blue);
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
@@ -166,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h1 { font-size: 2.5rem; }
@@ -176,18 +77,21 @@ h4 { font-size: 1.2rem; }
 p {
     color: var(--muted-white);
     margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
-    background-color: var(--pure-black);
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     height: 70px;
-    border-bottom: 1px solid var(--medium-gray);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .header-container {
@@ -206,16 +110,18 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .logo-icon { 
-    color: var(--soft-white); 
+    color: var(--accent-gold); 
     font-size: 1.8rem; 
 }
 
 .logo-nickname { 
     color: var(--accent-gold); 
-    font-weight: 800; 
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 /* Desktop Navigation */
@@ -234,6 +140,7 @@ header {
         padding: 8px 0;
         position: relative;
         transition: color 0.3s;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     nav ul li a:hover,
@@ -278,12 +185,14 @@ header {
         top: 70px;
         right: 15px;
         width: 260px;
-        background-color: var(--midnight-light);
+        background-color: rgba(21, 30, 44, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         flex-direction: column;
         gap: 0;
         padding: 10px 0;
         border-radius: 12px;
-        border: 1px solid var(--medium-gray);
+        border: 1px solid rgba(255, 215, 0, 0.3);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         transform: translateY(-20px);
         opacity: 0;
@@ -305,10 +214,10 @@ header {
         right: 25px;
         width: 16px;
         height: 16px;
-        background-color: var(--midnight-light);
+        background-color: rgba(21, 30, 44, 0.95);
         transform: rotate(45deg);
-        border-left: 1px solid var(--medium-gray);
-        border-top: 1px solid var(--medium-gray);
+        border-left: 1px solid rgba(255, 215, 0, 0.3);
+        border-top: 1px solid rgba(255, 215, 0, 0.3);
     }
     
     nav ul li {
@@ -329,7 +238,7 @@ header {
     nav ul li a:hover,
     nav ul li a.active {
         border-left-color: var(--accent-gold);
-        background-color: var(--midnight-accent);
+        background-color: rgba(255, 215, 0, 0.1);
         color: var(--accent-gold);
     }
     
@@ -354,10 +263,12 @@ header {
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-    background: linear-gradient(135deg, var(--pure-black), var(--midnight-blue));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(11, 15, 26, 0.75)) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 100px 0 50px;
     text-align: center;
-    border-bottom: 2px solid var(--medium-gray);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .page-header h1 {
@@ -375,76 +286,51 @@ header {
 /* ===== BUTTONS ===== */
 .btn {
     display: inline-block;
-    background-color: var(--midnight-light);
+    background-color: rgba(21, 30, 44, 0.85);
     color: var(--soft-white);
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
-    border: 1px solid var(--medium-gray);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     transition: all 0.3s;
     cursor: pointer;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btn:hover {
-    background-color: var(--midnight-accent);
-    border-color: var(--accent-gold);
+    background-color: rgba(255, 215, 0, 0.9);
+    color: var(--pure-black);
+    border-color: var(--soft-white);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .btn-gold {
-    background-color: var(--accent-gold);
+    background-color: rgba(255, 215, 0, 0.85);
     color: var(--pure-black);
-    border: none;
+    border: 1px solid var(--soft-white);
 }
 
 .btn-gold:hover {
-    background-color: #e6b800;
-    color: var(--pure-black);
+    background-color: rgba(255, 215, 0, 0.95);
 }
 
 .btn-outline {
     background-color: transparent;
-    border: 1px solid var(--medium-gray);
-}
-
-/* ===== CARDS ===== */
-.card {
-    background-color: var(--midnight-light);
-    border: 1px solid var(--medium-gray);
-    border-radius: 16px;
-    padding: 30px;
-    transition: all 0.3s;
-}
-
-.card:hover {
-    border-color: var(--accent-gold);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.card-icon {
-    font-size: 2.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    color: var(--soft-white);
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: var(--muted-white);
+    border: 1px solid rgba(255, 215, 0, 0.5);
 }
 
 /* ===== SOCIAL LINKS BAR ===== */
 .social-links-bar {
-    background-color: var(--pure-black);
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 15px 0;
-    border-top: 1px solid var(--medium-gray);
-    border-bottom: 1px solid var(--medium-gray);
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .social-links-container {
@@ -464,26 +350,31 @@ header {
     transition: all 0.3s;
     padding: 8px 16px;
     border-radius: 30px;
-    background-color: var(--midnight-blue);
-    border: 1px solid var(--medium-gray);
+    background-color: rgba(21, 30, 44, 0.5);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 .social-link-item:hover { 
     color: var(--accent-gold);
     border-color: var(--accent-gold);
     transform: translateY(-2px);
+    background-color: rgba(21, 30, 44, 0.8);
 }
 
 .social-link-item i {
     font-size: 1.1rem;
+    color: var(--accent-gold);
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background-color: var(--pure-black);
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 60px 0 30px;
     margin-top: auto;
-    border-top: 2px solid var(--medium-gray);
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .footer-content {
@@ -498,6 +389,7 @@ footer {
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--soft-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .footer-logo span { 
@@ -537,8 +429,8 @@ footer {
 .social-icons a {
     width: 40px;
     height: 40px;
-    background-color: var(--midnight-blue);
-    border: 1px solid var(--medium-gray);
+    background-color: rgba(21, 30, 44, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.3);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -546,18 +438,20 @@ footer {
     color: var(--muted-white);
     text-decoration: none;
     transition: all 0.3s;
+    backdrop-filter: blur(5px);
 }
 
 .social-icons a:hover {
     border-color: var(--accent-gold);
     color: var(--accent-gold);
     transform: translateY(-3px);
+    background-color: rgba(21, 30, 44, 0.9);
 }
 
 .copyright {
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid var(--medium-gray);
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
     color: var(--muted-white);
     font-size: 0.9rem;
 }
